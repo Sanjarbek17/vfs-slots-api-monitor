@@ -5,9 +5,10 @@ import time
 import json
 import requests
 import subprocess
-from playsound import playsound
+import pygame
 from urllib.parse import urlencode, quote_plus
 from datetime import datetime, timedelta
+
 
 class PingVFS:
     # default constructor
@@ -40,26 +41,25 @@ class PingVFS:
         with open(self.paths["output"], "a") as file_object:
             # Append 'hello' at the end of file
             file_object.write(output)
+
     def get_foramtted_date(self, date):
         return datetime.strptime(str(date), "%Y-%m-%d").strftime("%d/%m/%Y")
 
     def hit_vfs(self):
         headers = {
-            "Content-length" : "0",
-            "Content-type" : "application/json",
+            "Content-length": "0",
+            "Content-type": "application/json",
         }
 
         headers["Authorization"] = self.auth
 
-        from_date = datetime.now().date() + timedelta(days = 1)
-        to_date = from_date + timedelta(days = 90)
+        from_date = datetime.now().date() + timedelta(days=1)
+        to_date = from_date + timedelta(days=90)
 
         self.urlparams["fromDate"] = str(self.get_foramtted_date(from_date))
         self.urlparams["toDate"] = str(self.get_foramtted_date(to_date))
 
-        url = self.url \
-            + "?" \
-            + urlencode(self.urlparams, quote_via=quote_plus)
+        url = self.url + "?" + urlencode(self.urlparams, quote_via=quote_plus)
 
         try:
             resp = requests.get(url, headers=headers)
@@ -73,22 +73,36 @@ class PingVFS:
             resp = resp.json()
         except:
             return "ERROR " + str(resp.status_code)
-        
+
         return json.dumps(resp)
+
+    def send_notification(self, title, message):
+        if sys.platform == "darwin":  # macOS
+            os.system(
+                """
+                osascript -e 'display notification "{}" with title "{}"'
+            """.format(
+                    message, title
+                )
+            )
+        else:  # Linux
+            subprocess.call(["/usr/bin/notify-send", title, message])
 
     def init(self):
         auth = self.get_auth_token()
         count = 0
 
-        print("""
+        print(
+            """
 ██    ██ ███████ ███████     ███████ ██       ██████  ████████ ███████          
 ██    ██ ██      ██          ██      ██      ██    ██    ██    ██               
 ██    ██ █████   ███████     ███████ ██      ██    ██    ██    ███████          
  ██  ██  ██           ██          ██ ██      ██    ██    ██         ██          
-  ████   ██      ███████     ███████ ███████  ██████     ██    ███████ ██ ██ ██""")
+  ████   ██      ███████     ███████ ███████  ██████     ██    ███████ ██ ██ ██"""
+        )
 
         print("\n")
-        print("Started at:", end =" ")
+        print("Started at:", end=" ")
         print(datetime.now())
         print("Trying to access VFS appointment API for slots...")
         print("\n")
@@ -99,13 +113,15 @@ class PingVFS:
             request = self.hit_vfs()
             count += 1
 
-            output = "\nOutput: " \
-                + str(request) \
-                + "\nTime: " \
-                + str(datetime.now()) \
-                + "\nCount: " \
-                + str(count) \
+            output = (
+                "\nOutput: "
+                + str(request)
+                + "\nTime: "
+                + str(datetime.now())
+                + "\nCount: "
+                + str(count)
                 + "\n==="
+            )
 
             self.store_output(output)
 
@@ -126,21 +142,22 @@ class PingVFS:
             except:
                 continue
 
-        subprocess.call([
-            "/usr/bin/notify-send",
-            "VFS Slots!!!",
-            "Something Positive May Have Happend."
-        ])
+        self.send_notification("VFS Slots!!!", "Something Positive May Have Happened.")
         print("\n")
         print(str(count) + " times HTTP 200 response received.")
-        print("Ended at:", end =" ")
+        print("Ended at:", end=" ")
         print(datetime.now())
         time_diff = datetime.now() - self.start_time
         time_diff = time_diff.total_seconds() / 60.0
         print("Script ran for " + str(time_diff) + " minutes")
         # Will play the alert sound.
-        playsound(self.sound)
-        
+        pygame.mixer.init()
+        pygame.mixer.music.load(self.sound)
+        pygame.mixer.music.play()
+        while pygame.mixer.music.get_busy():
+            pygame.time.Clock().tick(10)
+        pygame.mixer.quit()
+
 
 def main(params):
     if not os.path.isfile(params):
@@ -150,9 +167,10 @@ def main(params):
     read = open(path, "r")
     params = json.loads(read.read())
     read.close()
-    
+
     ping = PingVFS(params)
     ping.init()
+
 
 if __name__ == "__main__":
     main("./ping_creds.json")
