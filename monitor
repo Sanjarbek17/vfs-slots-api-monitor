@@ -10,8 +10,6 @@ then
     tmux send -t 2 "source venv/bin/activate && sleep 30 && python3 PingVFS.py" C-m
     tmux split-window -v /bin/zsh
     tmux send -t 3 "source venv/bin/activate && python3 NewsVFS.py" C-m
-    tmux split-window -t 1 -v /bin/zsh
-    tmux send -t 4 "sleep 60 && tail -n 50 -f output.txt" C-m
     tmux -2 attach-session -d
 else
     tmux new-session -d /bin/zsh
@@ -20,7 +18,5 @@ else
     tmux send -t 1 "source venv/bin/activate && python3 AuthVFS.py" C-m
     tmux split-window -v /bin/zsh
     tmux send -t 2 "source venv/bin/activate && sleep 30 && python3 PingVFS.py" C-m
-    tmux split-window -t 1 -v /bin/zsh
-    tmux send -t 3 "sleep 60 && tail -n 50 -f output.txt" C-m
     tmux -2 attach-session -d
 fi

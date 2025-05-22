@@ -1,4 +1,16 @@
 #!/usr/bin/env python
+"""
+NewsVFS - VFS Global News Monitor
+
+This module monitors the VFS Global news feed for updates.
+It periodically checks for new articles and notifications,
+sending desktop notifications when new content is detected.
+
+Dependencies:
+    - requests
+    - pygame (for sound notifications)
+"""
+
 import os
 import sys
 import time
@@ -11,11 +23,38 @@ from datetime import datetime
 
 
 class NewsVFS:
-    # default constructor
+    """
+    A class to monitor and notify about VFS Global news updates.
+
+    This class continuously monitors the VFS news API for new articles
+    and sends desktop notifications when updates are detected.
+    """
+
     def __init__(self, params):
+        """
+        Initialize the NewsVFS monitor.
+
+        Args:
+            params (dict): Configuration parameters including:
+                - url: Base URL for the VFS news API
+                - headers: HTTP headers for API requests
+                - delay: Time between checks in seconds
+                - max_num: Threshold for total news count
+                - sound: Path to sound file for notifications
+        """
         self.params = params
 
     def send_notification(self, title, message):
+        """
+        Send a desktop notification using the system's native notification system.
+
+        Args:
+            title (str): The notification title
+            message (str): The notification message body
+
+        Note:
+            Uses osascript on macOS and notify-send on Linux
+        """
         if sys.platform == "darwin":  # macOS
             os.system(
                 """
@@ -28,6 +67,18 @@ class NewsVFS:
             subprocess.call(["/usr/bin/notify-send", title, message])
 
     def get_response(self, params):
+        """
+        Make an HTTP GET request to the VFS news API.
+
+        Args:
+            params (dict): Request parameters including:
+                - url: The API endpoint URL
+                - headers: HTTP headers for the request
+
+        Returns:
+            dict: The JSON response if successful
+            False: If the request fails or returns non-200 status
+        """
         resp = requests.get(params["url"], headers=params["headers"])
         if not 200 == resp.status_code:
             return False
@@ -40,16 +91,50 @@ class NewsVFS:
         return resp
 
     def get_total(self, resp, key):
+        """
+        Extract the total count from the API response.
+
+        Args:
+            resp (dict): The API response dictionary
+            key (str): The key containing the total count
+
+        Returns:
+            int: The total count if found
+            False: If the key doesn't exist
+        """
         if key in resp:
             return resp[key]
         return False
 
     def check_by_total(self, resp, key, current, post_date):
+        """
+        Check if there are new articles by comparing totals.
+
+        Args:
+            resp (dict): The API response dictionary
+            key (str): The key to check in the response
+            current (int): Current total count
+            post_date (str): Date of the last post
+
+        Returns:
+            int: New total count if found
+            False: If the key doesn't exist
+        """
         if key in resp:
             return resp[key]
         return False
 
     def intialize(self):
+        """
+        Initialize and run the news monitoring loop.
+
+        This method:
+        - Displays the VFS ASCII art banner
+        - Continuously monitors the news API
+        - Sends notifications for new articles
+        - Plays a sound alert when updates are found
+        - Prints article details to the console
+        """
         print(
             """
 ██    ██ ███████ ███████     ███    ██ ███████ ██     ██ ███████          
@@ -102,6 +187,24 @@ class NewsVFS:
 
 
 def main(params):
+    """
+    Main entry point for the VFS news monitor.
+
+    Args:
+        params (str): Path to the JSON configuration file
+
+    Returns:
+        False: If the configuration file doesn't exist
+        None: When monitoring is complete or interrupted
+
+    The configuration file should contain:
+        - url: Base URL for the VFS news API
+        - urlparams: Query parameters for the API
+        - headers: HTTP headers for requests
+        - delay: Time between checks
+        - max_num: Threshold for total news count
+        - sound: Path to notification sound file
+    """
     if not os.path.isfile(params):
         return False
 

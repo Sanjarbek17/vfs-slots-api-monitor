@@ -1,19 +1,20 @@
 {
-  "url" : "https://lift-api.vfsglobal.com/appointment/slots",
-  "urlparams" : {
-    "countryCode":"bgd",
-    "missionCode":"dnk",
-    "centerCode":"DEDK",
-    "loginUser": "YOU_EMAIL",
-    "visaCategoryCode":"002",
-    "languageCode":"en-US",
-    "applicantsCount":"1",
-    "days":"90",
-    "slotType":"2"
+  "url": "https://lift-api.vfsglobal.com/appointment/slots",
+  "urlparams": {
+    "countryCode": "YOUR_COUNTRY",
+    "missionCode": "YOUR_MISSION",
+    "centerCode": "YOUR_CENTER",
+    "loginUser": "YOUR_EMAIL",
+    "visaCategoryCode": "YOUR_CATEGORY",
+    "languageCode": "en-US",
+    "applicantsCount": "1",
+    "days": "90",
+    "slotType": "2"
   },
-  "paths" : {
-    "auth" : "./auth.txt",
-    "output" : "./output.txt"
+  "paths": {
+    "auth": "./auth.txt",
+    "output": "./output.txt"
   },
-  "sound" : "./alert.mp3"
+  "sound": "./alert.mp3",
+  "_comment": "This is an example configuration. Replace the placeholders with your actual values."
 }

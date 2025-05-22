@@ -1,8 +1,55 @@
-# VFS slots API monitor
-These are some **Python 3** scripts written for monitoring the VFS visa application slots API. **Selenium** with **ChromeDriver(webdriver)** used for collecting the JWT, **tmux** used for the UX and **tail** utility used for printing the output in the terminal.
+# VFS Slots API Monitor
 
-:warning: :bangbang: _**NOTICE**_ :bangbang: :warning: \
-_I wrote these scripts to monitor the VFS time slots booking API when I struggled to book one at VFS **Bangladesh** during the Q3 of 2021. And it served it's purpose! But, as I've some other more important things to concentrate now, therefore, maintenance of this project isn't a high priority for me anymore. :no\_entry\_sign: **Hereby, please don't bother me by sending emails regarding this project:heavy\_exclamation\_mark:** However, you can always create GitHub issues though, and I'll go through those when I get a chance. Thank you._
+A collection of Python scripts for monitoring VFS Global visa application slots and news updates. This tool helps users track appointment slot availability and news updates from VFS Global.
+
+## Features
+
+- **Automated Authentication** (`AuthVFS.py`)
+  - Handles login to VFS Global website
+  - Extracts and manages JWT tokens
+  - Uses Selenium for browser automation
+  - Supports CAPTCHA solving
+
+- **Appointment Slot Monitoring** (`PingVFS.py`)
+  - Continuously monitors for available appointment slots
+  - Sends desktop notifications when slots are found
+  - Plays sound alerts for immediate attention
+  - Logs all responses for tracking
+
+- **News Updates** (`NewsVFS.py`)
+  - Monitors VFS Global news feed
+  - Notifies about new articles and announcements
+  - Displays news content in terminal
+  - Sound notifications for updates
+
+## Requirements
+
+- Python 3.x
+- Chrome/Chromium browser
+- Required Python packages:
+  - selenium
+  - requests
+  - pygame
+  - playsound (for Windows)
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/vfs-slots-api-monitor.git
+cd vfs-slots-api-monitor
+```
+
+2. Create a virtual environment and activate it:
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install the required packages:
+```bash
+pip install selenium requests pygame playsound
+```
 
 
 ![Screenshot](screenshot.png)
@@ -19,11 +66,59 @@ Hints-
 - Rename the `example.*.json` files to `*.json` and set necessary credentials in there.
 - Place a `*.mp3` music file as `alert.mp3` in the project root directory.
 
-## License
-Copyright (c) 2021 [CodeMascot](https://www.codemascot.com/) AKA [Khan Mohammad R.](https://www.codemascot.com/)
+## Configuration
 
-Good news, these scripts are free for everyone! Since these are released under the [MIT License](LICENSE) you can use them free of charge for your personal or commercial interest as long as you follow the [MIT License](LICENSE).
+1. Copy the example configuration files:
+```bash
+cp example.auth_creds.json auth_creds.json
+cp example.ping_creds.json ping_creds.json
+cp example.news_creds.json news_creds.json
+```
+
+2. Edit the configuration files with your details:
+- `auth_creds.json`: VFS login credentials
+- `ping_creds.json`: Appointment monitoring settings
+- `news_creds.json`: News monitoring settings
+
+## Usage
+
+Run the monitor script with or without news monitoring:
+
+```bash
+# Without news monitoring
+./monitor
+
+# With news monitoring
+./monitor --with-news
+```
+
+The script will:
+1. Start authentication process
+2. Monitor for appointment slots
+3. Monitor news updates (if enabled)
+4. Send notifications for any changes
+
+## Understanding the Output
+
+- `.` (dots): Indicates active monitoring
+- Notifications: Desktop notifications for updates
+- Sound alerts: Plays when slots are found
+- Terminal output: Detailed information and status
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
-All feedback / bug reports / pull requests are welcome.
+Contributions are welcome! Please feel free to submit pull requests.
+
+## Troubleshooting
+
+- **Authentication Issues**: Check your credentials in `auth_creds.json`
+- **CAPTCHA**: The script will pause for manual CAPTCHA solving
+- **Sound not working**: Ensure system volume is on and audio device is working
+
+## Disclaimer
+
+This tool is for personal use only. Please respect VFS Global's terms of service and rate limiting policies.

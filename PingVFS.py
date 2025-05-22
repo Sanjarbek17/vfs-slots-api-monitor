@@ -1,4 +1,17 @@
 #!/usr/bin/env python
+"""
+PingVFS - VFS Global Appointment Slot Monitor
+
+This module continuously monitors the VFS Global appointment system API
+for available slots. It uses JWT authentication and provides
+notifications when slots become available.
+
+Dependencies:
+    - requests
+    - pygame (for sound notifications)
+    - urllib.parse (for URL handling)
+"""
+
 import os
 import sys
 import time
@@ -11,8 +24,26 @@ from datetime import datetime, timedelta
 
 
 class PingVFS:
+    """
+    A class to monitor VFS Global appointment slots availability.
+
+    This class periodically checks the VFS appointment API for available
+    slots, manages authentication, and provides notifications when
+    slots are found.
+    """
+
     # default constructor
     def __init__(self, params):
+        """
+        Initialize the PingVFS monitor.
+
+        Args:
+            params (dict): Configuration parameters including:
+                - url: Base API URL
+                - urlparams: URL query parameters
+                - paths: Paths for auth and output files
+                - sound: Path to alert sound file
+        """
         self.url = params["url"]
         self.urlparams = params["urlparams"]
         self.paths = params["paths"]
@@ -21,6 +52,18 @@ class PingVFS:
         self.sound = params["sound"]
 
     def get_auth_token(self):
+        """
+        Read and validate the authentication token.
+
+        Returns:
+            str: Valid authentication token
+            False: If token file doesn't exist or is invalid
+
+        This method:
+        - Reads token from file
+        - Validates token format
+        - Caches token for subsequent use
+        """
         if not os.path.isfile(self.paths["auth"]):
             return False
 
@@ -37,15 +80,46 @@ class PingVFS:
         return self.auth
 
     def store_output(self, output):
-        # Saving the output in result.txt.
+        """
+        Store API response output to a file.
+
+        Args:
+            output (str): The output text to store
+
+        This method appends the output to the configured output file,
+        creating a log of all API responses.
+        """
         with open(self.paths["output"], "a") as file_object:
-            # Append 'hello' at the end of file
             file_object.write(output)
 
     def get_foramtted_date(self, date):
+        """
+        Format a date for the VFS API.
+
+        Args:
+            date (datetime.date): The date to format
+
+        Returns:
+            str: Date formatted as dd/mm/yyyy
+
+        This method converts Python date objects to the
+        format required by the VFS API.
+        """
         return datetime.strptime(str(date), "%Y-%m-%d").strftime("%d/%m/%Y")
 
     def hit_vfs(self):
+        """
+        Make a request to the VFS appointment API.
+
+        Returns:
+            str: JSON response if successful
+            str: Error message if request fails
+
+        This method:
+        - Constructs API request with authentication
+        - Sets date range for appointment search
+        - Handles connection and JSON parsing errors
+        """
         headers = {
             "Content-length": "0",
             "Content-type": "application/json",
@@ -77,6 +151,17 @@ class PingVFS:
         return json.dumps(resp)
 
     def send_notification(self, title, message):
+        """
+        Send a desktop notification using the system's native notification system.
+
+        Args:
+            title (str): The notification title
+            message (str): The notification message
+
+        This method uses:
+        - osascript for macOS notifications
+        - notify-send for Linux notifications
+        """
         if sys.platform == "darwin":  # macOS
             os.system(
                 """
@@ -89,6 +174,17 @@ class PingVFS:
             subprocess.call(["/usr/bin/notify-send", title, message])
 
     def init(self):
+        """
+        Initialize and run the appointment slot monitoring process.
+
+        This method:
+        - Verifies authentication token
+        - Displays startup banner
+        - Continuously monitors the API for slots
+        - Logs responses and tracks statistics
+        - Sends notifications when slots are found
+        - Plays sound alerts for immediate attention
+        """
         auth = self.get_auth_token()
         count = 0
 
@@ -160,6 +256,21 @@ class PingVFS:
 
 
 def main(params):
+    """
+    Main entry point for the VFS appointment slot monitor.
+
+    Args:
+        params (str): Path to JSON configuration file
+
+    Returns:
+        False: If configuration file doesn't exist
+
+    The configuration file should contain:
+        - url: Base API URL
+        - urlparams: Query parameters
+        - paths: File paths for auth and output
+        - sound: Path to alert sound file
+    """
     if not os.path.isfile(params):
         return False
 
