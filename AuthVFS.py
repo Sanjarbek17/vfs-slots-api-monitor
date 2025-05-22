@@ -87,52 +87,151 @@ class AuthVFS:
         Returns:
             WebDriver: The driver instance after login attempt
             False: If login elements cannot be found
-
-        This method:
-        - Waits for login form elements to be present
-        - Fills in credentials
-        - Handles form submission
-        - Reports progress via console
         """
         try:
             print("\nWaiting for login form to load...")
+            # Save the page source for debugging
+            page_source = driver.page_source
+            with open("login_page.html", "w", encoding="utf-8") as f:
+                f.write(page_source)
+            print("Saved login page HTML to login_page.html")
+
+            # Print all form elements for debugging
+            print("\nSearching for form elements...")
+            forms = driver.find_elements(By.TAG_NAME, "form")
+            for i, form in enumerate(forms):
+                print(f"\nForm {i+1}:")
+                inputs = form.find_elements(By.TAG_NAME, "input")
+                for input_elem in inputs:
+                    input_type = input_elem.get_attribute("type")
+                    input_name = input_elem.get_attribute("name")
+                    input_id = input_elem.get_attribute("id")
+                    print(f"Input: type={input_type}, name={input_name}, id={input_id}")
+
             # Wait up to 20 seconds for elements to be present
             wait = WebDriverWait(driver, 20)
 
-            # Wait for each element with explicit waits
-            email = wait.until(
-                EC.presence_of_element_located((By.NAME, "email")),
-                message="Email field not found",
-            )
-            print("Found email field")
+            print("Attempting to find elements using XPath and CSS selectors...")
+            email_selectors = [
+                (By.XPATH, args["email_id"]),  # From config
+                (
+                    By.CSS_SELECTOR,
+                    "input#email[formcontrolname='username']",
+                ),  # Angular Material specific
+                (By.CSS_SELECTOR, "input#email[type='text']"),
+                (By.ID, "email"),
+            ]
 
-            password = wait.until(
-                EC.presence_of_element_located((By.NAME, "password")),
-                message="Password field not found",
-            )
-            print("Found password field")
+            email = None
+            for by, selector in email_selectors:
+                try:
+                    email = wait.until(EC.presence_of_element_located((by, selector)))
+                    if email and email.is_displayed():
+                        print(f"Found email field using: {by}={selector}")
+                        break
+                except:
+                    continue
 
-            submit = wait.until(
-                EC.element_to_be_clickable((By.XPATH, "//button[@type='submit']")),
-                message="Submit button not found or not clickable",
-            )
-            print("Found submit button")
+            if not email:
+                raise Exception("Could not find email field with any selector")
 
-            print("All form elements located successfully!")
+            # Try to find password field
+            password_selectors = [
+                (By.XPATH, args["password_id"]),  # From config
+                (By.CSS_SELECTOR, "input#password[type='password']"),
+                (By.ID, "password"),
+            ]
+
+            password = None
+            for by, selector in password_selectors:
+                try:
+                    password = wait.until(
+                        EC.presence_of_element_located((by, selector))
+                    )
+                    if password and password.is_displayed():
+                        print(f"Found password field using: {by}={selector}")
+                        break
+                except:
+                    continue
+
+            if not password:
+                raise Exception("Could not find password field with any selector")
+
+            # Try to find submit button with Angular Material specific selectors
+            submit_selectors = [
+                (By.XPATH, args["submit"]),  # From config
+                (By.CSS_SELECTOR, "button.btn-brand-orange.mat-mdc-outlined-button"),
+                (By.XPATH, "//button[contains(@class, 'btn-brand-orange')]"),
+                (By.XPATH, "//button[contains(text(), ' Sign In ')]"),
+            ]
+
+            submit = None
+            for by, selector in submit_selectors:
+                try:
+                    # First try to find the element regardless of disabled state
+                    element = wait.until(EC.presence_of_element_located((by, selector)))
+                    if element and element.is_displayed():
+                        print(f"Found submit button using: {by}={selector}")
+                        submit = element
+                        break
+                except:
+                    continue
+
+            if not submit:
+                raise Exception("Could not find submit button with any selector")
+
+            # Wait for the button to become enabled after filling in credentials
+            try:
+                # Make sure elements are in view and interactable
+                driver.execute_script("arguments[0].scrollIntoView(true);", email)
+                time.sleep(1)
+
+                # Fill up the form fields with necessary credentials
+                email.clear()  # Clear any existing value
+                email.send_keys(args["user"])
+                print("Email entered successfully")
+
+                password.clear()  # Clear any existing value
+                password.send_keys(args["pass"])
+                print("Password entered successfully")
+
+                # Wait a bit for form validation
+                time.sleep(2)
+
+                # Wait for button to become enabled
+                wait.until(lambda driver: not submit.get_attribute("disabled"))
+                print("Submit button is now enabled")
+
+            except Exception as e:
+                print(f"Error during form interaction: {str(e)}")
+                return False
+
+            # Make sure submit button is in view
+            driver.execute_script("arguments[0].scrollIntoView(true);", submit)
+            time.sleep(1)
+
+            # Try regular click first
+            try:
+                submit.click()
+                print("Clicked submit button successfully")
+            except Exception as click_error:
+                print(f"Regular click failed: {str(click_error)}")
+                # If regular click fails, try JavaScript click
+                try:
+                    driver.execute_script("arguments[0].click();", submit)
+                    print("JavaScript click on submit button successful")
+                except Exception as js_error:
+                    print(f"JavaScript click failed: {str(js_error)}")
+                    return False
+
+            # Wait for the response
+            time.sleep(self.args["avrg_delay"])
+
+            return driver
+
         except Exception as e:
-            print(f"\nError finding login elements: {str(e)}")
+            print(f"\nError in login process: {str(e)}")
             return False
-
-        # Fill up the form fields with necessary credentials.
-        email.send_keys(args["user"])
-        password.send_keys(args["pass"])
-        time.sleep(self.args["avrg_delay"])
-        # Submit the form.
-        submit.click()
-        # Wait 10 seconds for the response to come.
-        time.sleep(self.args["avrg_delay"])
-        # Return the driver instance.
-        return driver
 
     def get_jwt(self, args):
         """
@@ -265,13 +364,13 @@ class AuthVFS:
             jwt = self.get_jwt(self.args)
             if self.write_auth(self.args["auth_path"], jwt):
                 count += 1
-                # # Printing the JWT, Time and Count
-                # print("JWT:", end =" ")
-                # print(jwt)
-                # print("Time:", end =" ")
-                # print(datetime.now(), end =" --- Count: ")
-                # print(count)
-                # print("====")
+                # Printing the JWT, Time and Count
+                print("JWT:", end=" ")
+                print(jwt)
+                print("Time:", end=" ")
+                print(datetime.now(), end=" --- Count: ")
+                print(count)
+                print("====")
                 print(".", end="", flush=True),
                 # Putting the script to sleep for the delay
                 time.sleep(self.args["refr_delay"])
