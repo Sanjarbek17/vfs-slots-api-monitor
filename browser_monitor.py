@@ -46,15 +46,25 @@ class BrowserMonitor:
             )
             chrome_options.add_experimental_option("useAutomationExtension", False)
 
-            # Enable performance logging to capture network activity
-            chrome_options.add_experimental_option(
-                "perfLoggingPrefs",
-                {"enableNetwork": True, "enablePage": True, "enableTimeline": True},
-            )
-            chrome_options.set_capability(
-                "goog:loggingPrefs",
-                {"browser": "ALL", "driver": "ALL", "performance": "ALL"},
-            )
+            # Try to enable performance logging with fallback
+            try:
+                # Enable performance logging to capture network activity
+                chrome_options.add_experimental_option(
+                    "perfLoggingPrefs",
+                    {"enableNetwork": True, "enablePage": True},
+                )
+                chrome_options.set_capability(
+                    "goog:loggingPrefs",
+                    {"browser": "ALL", "driver": "ALL", "performance": "ALL"},
+                )
+                logger.info("Performance logging enabled")
+            except Exception as perf_error:
+                logger.warning(f"Performance logging not available: {perf_error}")
+                # Fallback to basic logging only
+                chrome_options.set_capability(
+                    "goog:loggingPrefs",
+                    {"browser": "ALL", "driver": "ALL"},
+                )
 
             # Use WebDriver Manager to automatically handle ChromeDriver
             service = Service(ChromeDriverManager().install())
@@ -69,6 +79,29 @@ class BrowserMonitor:
 
         except Exception as e:
             logger.error(f"Failed to setup Chrome: {str(e)}")
+            # Try fallback setup with minimal options
+            return self._setup_chrome_fallback()
+
+    def _setup_chrome_fallback(self):
+        """Fallback Chrome setup with minimal options"""
+        try:
+            logger.info("Attempting fallback Chrome setup...")
+            chrome_options = Options()
+
+            # Minimal options for basic functionality
+            chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+            chrome_options.add_experimental_option(
+                "excludeSwitches", ["enable-automation"]
+            )
+
+            service = Service(ChromeDriverManager().install())
+            self.driver = webdriver.Chrome(service=service, options=chrome_options)
+
+            logger.info("Chrome browser initialized with fallback options")
+            return True
+
+        except Exception as e:
+            logger.error(f"Fallback setup also failed: {str(e)}")
             return False
 
     def log_activity(self, activity_type, details):
@@ -100,49 +133,40 @@ class BrowserMonitor:
             )
 
             # Get browser logs
-            browser_logs = self.driver.get_log("browser")
-            if browser_logs:
-                self.log_activity("BROWSER_LOGS", browser_logs[-5:])  # Last 5 logs
+            try:
+                browser_logs = self.driver.get_log("browser")
+                if browser_logs:
+                    self.log_activity("BROWSER_LOGS", browser_logs[-5:])  # Last 5 logs
+            except Exception as e:
+                logger.debug(f"Browser logs not available: {e}")
 
             # Get performance logs (network activity)
             try:
                 perf_logs = self.driver.get_log("performance")
                 network_events = []
                 for log in perf_logs:
-                    message = json.loads(log["message"])
-                    if message["message"]["method"].startswith("Network"):
-                        network_events.append(message["message"])
+                    try:
+                        message = json.loads(log["message"])
+                        if (
+                            message.get("message", {})
+                            .get("method", "")
+                            .startswith("Network")
+                        ):
+                            network_events.append(message["message"])
+                    except (json.JSONDecodeError, KeyError):
+                        continue
 
                 if network_events:
                     self.log_activity(
                         "NETWORK_ACTIVITY", network_events[-3:]
                     )  # Last 3 events
-            except:
-                pass  # Performance logs might not be available
+            except Exception as e:
+                logger.debug(
+                    f"Performance logs not available: {e}"
+                )  # Changed to debug level
 
         except Exception as e:
             logger.warning(f"Error monitoring page: {str(e)}")
-
-    def get_url_from_user(self):
-        """Get URL input from user"""
-        while True:
-            url = input("\nEnter URL to visit (or 'quit' to exit): ").strip()
-
-            if url.lower() == "quit":
-                return None
-
-            # Add protocol if missing
-            if not url.startswith(("http://", "https://")):
-                url = "https://" + url
-
-            try:
-                # Basic URL validation
-                if "." in url and len(url) > 7:
-                    return url
-                else:
-                    print("Please enter a valid URL")
-            except:
-                print("Please enter a valid URL")
 
     def visit_url(self, url):
         """Visit the specified URL and log the action"""
@@ -167,9 +191,11 @@ class BrowserMonitor:
     def monitor_user_activity(self):
         """Monitor user interactions in real-time"""
         print("\n" + "=" * 60)
-        print("Browser Monitor is now active!")
-        print("You can interact with the browser normally.")
-        print("Press Ctrl+C in this terminal to stop monitoring.")
+        print("🔍 Browser Monitor is now active!")
+        print("📱 Use Chrome normally - all your activity is being logged")
+        print("🌐 Navigate to any website, click links, type, etc.")
+        print("⏹️  Press Ctrl+C in this terminal to stop monitoring")
+        print("🚪 Or simply close the Chrome window to end monitoring")
         print("=" * 60)
 
         last_url = ""
@@ -240,24 +266,13 @@ class BrowserMonitor:
             return
 
         try:
-            while True:
-                # Get URL from user
-                url = self.get_url_from_user()
-                if url is None:
-                    break
+            # Open Chromewe  with a completely blank page
+            print("Opening Chrome browser...")
+            self.driver.get("about:blank")
+            self.log_activity("BROWSER_OPENED", "Chrome browser opened for monitoring")
 
-                # Visit the URL
-                self.visit_url(url)
-
-                # Start monitoring user activity
-                self.monitor_user_activity()
-
-                # Ask if user wants to continue
-                continue_choice = (
-                    input("\nDo you want to visit another URL? (y/n): ").strip().lower()
-                )
-                if continue_choice != "y":
-                    break
+            # Start monitoring user activity immediately
+            self.monitor_user_activity()
 
         except KeyboardInterrupt:
             logger.info("Program interrupted by user")

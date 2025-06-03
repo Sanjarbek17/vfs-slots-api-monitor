@@ -1,0 +1,629 @@
+{
+  "session_start": "2025-06-03T11:08:32.021955",
+  "session_end": "2025-06-03T11:09:06.074859",
+  "total_activities": 23,
+  "activities": [
+    {
+      "timestamp": "2025-06-03T11:08:35.122042",
+      "type": "BROWSER_OPENED",
+      "details": "Chrome browser opened for monitoring",
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:35.130092",
+      "type": "URL_CHANGE",
+      "details": {
+        "from": "",
+        "to": "about:blank"
+      },
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:35.135179",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "about:blank",
+        "title": "",
+        "timestamp": "2025-06-03T11:08:35.135169"
+      },
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:35.138376",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.policyUpdated",
+          "params": {}
+        }
+      ],
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:37.164263",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "about:blank",
+        "title": "",
+        "timestamp": "2025-06-03T11:08:37.164245"
+      },
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:39.196344",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "about:blank",
+        "title": "",
+        "timestamp": "2025-06-03T11:08:39.196316"
+      },
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:42.270667",
+      "type": "URL_CHANGE",
+      "details": {
+        "from": "about:blank",
+        "to": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:42.272291",
+      "type": "TITLE_CHANGE",
+      "details": {
+        "from": "",
+        "to": "youtube - Google qidiruvi"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:42.277374",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:42.277367"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:42.297311",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.requestWillBeSentExtraInfo",
+          "params": {
+            "associatedCookies": [],
+            "clientSecurityState": {
+              "initiatorIPAddressSpace": "Public",
+              "initiatorIsSecureContext": true,
+              "privateNetworkRequestPolicy": "PreflightWarn"
+            },
+            "connectTiming": {
+              "requestTime": 154255.392727
+            },
+            "headers": {
+              ":authority": "www.gstatic.com",
+              ":method": "GET",
+              ":path": "/images/branding/searchlogo/ico/favicon.ico",
+              ":scheme": "https",
+              "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+              "accept-encoding": "gzip, deflate, br, zstd",
+              "accept-language": "en-US,en;q=0.9",
+              "priority": "u=1, i",
+              "referer": "https://www.google.com/",
+              "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-fetch-dest": "image",
+              "sec-fetch-mode": "no-cors",
+              "sec-fetch-site": "cross-site",
+              "sec-fetch-storage-access": "active",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+              "x-client-data": "CKrjygE="
+            },
+            "requestId": "84863.41",
+            "siteHasCookieInOtherPartition": false
+          }
+        },
+        {
+          "method": "Network.requestWillBeSent",
+          "params": {
+            "documentURL": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+            "frameId": "87FD8E3E014C4E5302A3AECF086D3024",
+            "hasUserGesture": false,
+            "initiator": {
+              "type": "other"
+            },
+            "loaderId": "D943E332BB7F6EC6873ECAD260FE6A69",
+            "redirectHasExtraInfo": false,
+            "request": {
+              "headers": {
+                "Referer": "",
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+                "downlink": "1.95",
+                "rtt": "200",
+                "sec-ch-prefers-color-scheme": "dark",
+                "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+                "sec-ch-ua-arch": "\"arm\"",
+                "sec-ch-ua-bitness": "\"64\"",
+                "sec-ch-ua-form-factors": "\"Desktop\"",
+                "sec-ch-ua-full-version": "\"137.0.7151.56\"",
+                "sec-ch-ua-full-version-list": "\"Google Chrome\";v=\"137.0.7151.56\", \"Chromium\";v=\"137.0.7151.56\", \"Not/A)Brand\";v=\"24.0.0.0\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-model": "\"\"",
+                "sec-ch-ua-platform": "\"macOS\"",
+                "sec-ch-ua-platform-version": "\"15.5.0\"",
+                "sec-ch-ua-wow64": "?0"
+              },
+              "initialPriority": "VeryLow",
+              "isSameSite": true,
+              "method": "GET",
+              "mixedContentType": "none",
+              "referrerPolicy": "no-referrer",
+              "url": "https://www.google.com/shared_dict/srp/57828496cb5fbf5babd694589664fa207c415c731684436d55d7639a20db0377.dict"
+            },
+            "requestId": "84863.42",
+            "timestamp": 154255.401459,
+            "type": "Other",
+            "wallTime": 1748930922.274183
+          }
+        },
+        {
+          "method": "Network.requestWillBeSentExtraInfo",
+          "params": {
+            "associatedCookies": [],
+            "clientSecurityState": {
+              "initiatorIPAddressSpace": "Public",
+              "initiatorIsSecureContext": true,
+              "privateNetworkRequestPolicy": "PreflightWarn"
+            },
+            "connectTiming": {
+              "requestTime": 154255.401697
+            },
+            "headers": {
+              ":authority": "www.google.com",
+              ":method": "GET",
+              ":path": "/shared_dict/srp/57828496cb5fbf5babd694589664fa207c415c731684436d55d7639a20db0377.dict",
+              ":scheme": "https",
+              "accept": "*/*",
+              "accept-encoding": "gzip, deflate, br, zstd",
+              "accept-language": "en-US,en;q=0.9",
+              "downlink": "1.95",
+              "priority": "u=4, i",
+              "rtt": "200",
+              "sec-ch-prefers-color-scheme": "dark",
+              "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+              "sec-ch-ua-arch": "\"arm\"",
+              "sec-ch-ua-bitness": "\"64\"",
+              "sec-ch-ua-form-factors": "\"Desktop\"",
+              "sec-ch-ua-full-version": "\"137.0.7151.56\"",
+              "sec-ch-ua-full-version-list": "\"Google Chrome\";v=\"137.0.7151.56\", \"Chromium\";v=\"137.0.7151.56\", \"Not/A)Brand\";v=\"24.0.0.0\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-model": "\"\"",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-ch-ua-platform-version": "\"15.5.0\"",
+              "sec-ch-ua-wow64": "?0",
+              "sec-fetch-dest": "empty",
+              "sec-fetch-mode": "cors",
+              "sec-fetch-site": "same-origin",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+              "x-client-data": "CKrjygE="
+            },
+            "requestId": "84863.42",
+            "siteHasCookieInOtherPartition": false
+          }
+        }
+      ],
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:44.351974",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:44.351961"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:44.375930",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.dataReceived",
+          "params": {
+            "dataLength": 53,
+            "encodedDataLength": 0,
+            "requestId": "84863.35",
+            "timestamp": 154256.260321
+          }
+        },
+        {
+          "method": "Network.dataReceived",
+          "params": {
+            "dataLength": 0,
+            "encodedDataLength": 30,
+            "requestId": "84863.35",
+            "timestamp": 154256.261261
+          }
+        },
+        {
+          "method": "Network.loadingFinished",
+          "params": {
+            "encodedDataLength": 54,
+            "requestId": "84863.35",
+            "timestamp": 154256.260073
+          }
+        }
+      ],
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:46.404484",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:46.404464"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:46.410986",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.responseReceived",
+          "params": {
+            "frameId": "87FD8E3E014C4E5302A3AECF086D3024",
+            "hasExtraInfo": true,
+            "loaderId": "D943E332BB7F6EC6873ECAD260FE6A69",
+            "requestId": "84863.60",
+            "response": {
+              "alternateProtocolUsage": "mainJobWonRace",
+              "charset": "utf-8",
+              "connectionId": 352,
+              "connectionReused": true,
+              "encodedDataLength": 46,
+              "fromDiskCache": false,
+              "fromPrefetchCache": false,
+              "fromServiceWorker": false,
+              "headers": {
+                "access-control-allow-credentials": "true",
+                "access-control-allow-headers": "X-Playlog-Web",
+                "access-control-allow-origin": "https://www.google.com",
+                "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                "content-encoding": "gzip",
+                "content-length": "131",
+                "content-type": "text/plain; charset=UTF-8",
+                "cross-origin-resource-policy": "cross-origin",
+                "date": "Tue, 03 Jun 2025 06:08:45 GMT",
+                "server": "Playlog",
+                "x-frame-options": "SAMEORIGIN",
+                "x-xss-protection": "0"
+              },
+              "mimeType": "text/plain",
+              "protocol": "h2",
+              "remoteIPAddress": "216.58.210.142",
+              "remotePort": 443,
+              "responseTime": 1748930925073.289,
+              "securityDetails": {
+                "certificateId": 0,
+                "certificateTransparencyCompliance": "compliant",
+                "cipher": "AES_128_GCM",
+                "encryptedClientHello": false,
+                "issuer": "WR2",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "protocol": "TLS 1.3",
+                "sanList": [
+                  "*.google.com",
+                  "*.appengine.google.com",
+                  "*.bdn.dev",
+                  "*.origin-test.bdn.dev",
+                  "*.cloud.google.com",
+                  "*.crowdsource.google.com",
+                  "*.datacompute.google.com",
+                  "*.google.ca",
+                  "*.google.cl",
+                  "*.google.co.in",
+                  "*.google.co.jp",
+                  "*.google.co.uk",
+                  "*.google.com.ar",
+                  "*.google.com.au",
+                  "*.google.com.br",
+                  "*.google.com.co",
+                  "*.google.com.mx",
+                  "*.google.com.tr",
+                  "*.google.com.vn",
+                  "*.google.de",
+                  "*.google.es",
+                  "*.google.fr",
+                  "*.google.hu",
+                  "*.google.it",
+                  "*.google.nl",
+                  "*.google.pl",
+                  "*.google.pt",
+                  "*.googleapis.cn",
+                  "*.googlevideo.com",
+                  "*.gstatic.cn",
+                  "*.gstatic-cn.com",
+                  "googlecnapps.cn",
+                  "*.googlecnapps.cn",
+                  "googleapps-cn.com",
+                  "*.googleapps-cn.com",
+                  "gkecnapps.cn",
+                  "*.gkecnapps.cn",
+                  "googledownloads.cn",
+                  "*.googledownloads.cn",
+                  "recaptcha.net.cn",
+                  "*.recaptcha.net.cn",
+                  "recaptcha-cn.net",
+                  "*.recaptcha-cn.net",
+                  "widevine.cn",
+                  "*.widevine.cn",
+                  "ampproject.org.cn",
+                  "*.ampproject.org.cn",
+                  "ampproject.net.cn",
+                  "*.ampproject.net.cn",
+                  "google-analytics-cn.com",
+                  "*.google-analytics-cn.com",
+                  "googleadservices-cn.com",
+                  "*.googleadservices-cn.com",
+                  "googlevads-cn.com",
+                  "*.googlevads-cn.com",
+                  "googleapis-cn.com",
+                  "*.googleapis-cn.com",
+                  "googleoptimize-cn.com",
+                  "*.googleoptimize-cn.com",
+                  "doubleclick-cn.net",
+                  "*.doubleclick-cn.net",
+                  "*.fls.doubleclick-cn.net",
+                  "*.g.doubleclick-cn.net",
+                  "doubleclick.cn",
+                  "*.doubleclick.cn",
+                  "*.fls.doubleclick.cn",
+                  "*.g.doubleclick.cn",
+                  "dartsearch-cn.net",
+                  "*.dartsearch-cn.net",
+                  "googletraveladservices-cn.com",
+                  "*.googletraveladservices-cn.com",
+                  "googletagservices-cn.com",
+                  "*.googletagservices-cn.com",
+                  "googletagmanager-cn.com",
+                  "*.googletagmanager-cn.com",
+                  "googlesyndication-cn.com",
+                  "*.googlesyndication-cn.com",
+                  "*.safeframe.googlesyndication-cn.com",
+                  "app-measurement-cn.com",
+                  "*.app-measurement-cn.com",
+                  "gvt1-cn.com",
+                  "*.gvt1-cn.com",
+                  "gvt2-cn.com",
+                  "*.gvt2-cn.com",
+                  "2mdn-cn.net",
+                  "*.2mdn-cn.net",
+                  "googleflights-cn.net",
+                  "*.googleflights-cn.net",
+                  "admob-cn.com",
+                  "*.admob-cn.com",
+                  "googlesandbox-cn.com",
+                  "*.googlesandbox-cn.com",
+                  "*.safenup.googlesandbox-cn.com",
+                  "*.gstatic.com",
+                  "*.metric.gstatic.com",
+                  "*.gvt1.com",
+                  "*.gcpcdn.gvt1.com",
+                  "*.gvt2.com",
+                  "*.gcp.gvt2.com",
+                  "*.url.google.com",
+                  "*.youtube-nocookie.com",
+                  "*.ytimg.com",
+                  "ai.android",
+                  "android.com",
+                  "*.android.com",
+                  "*.flash.android.com",
+                  "g.cn",
+                  "*.g.cn",
+                  "g.co",
+                  "*.g.co",
+                  "goo.gl",
+                  "www.goo.gl",
+                  "google-analytics.com",
+                  "*.google-analytics.com",
+                  "google.com",
+                  "googlecommerce.com",
+                  "*.googlecommerce.com",
+                  "ggpht.cn",
+                  "*.ggpht.cn",
+                  "urchin.com",
+                  "*.urchin.com",
+                  "youtu.be",
+                  "youtube.com",
+                  "*.youtube.com",
+                  "music.youtube.com",
+                  "*.music.youtube.com",
+                  "youtubeeducation.com",
+                  "*.youtubeeducation.com",
+                  "youtubekids.com",
+                  "*.youtubekids.com",
+                  "yt.be",
+                  "*.yt.be",
+                  "android.clients.google.com",
+                  "*.android.google.cn",
+                  "*.chrome.google.cn",
+                  "*.developers.google.cn",
+                  "*.aistudio.google.com"
+                ],
+                "serverSignatureAlgorithm": 1027,
+                "signedCertificateTimestampList": [
+                  {
+                    "hashAlgorithm": "SHA-256",
+                    "logDescription": "Google 'Argon2025h2' log",
+                    "logId": "12F14E34BD53724C840619C38F3F7A13F8E7B56287889C6D300584EBE586263A",
+                    "origin": "Embedded in certificate",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502201CE09B52A98066965D3CAC955F890056EEFF83AFD85781CBE1C44D54BB984961022100E96C7DED747D277D771A5049719ABEFD4896D22608D1CB0A61A9D819A9F41B3C",
+                    "status": "Verified",
+                    "timestamp": 1747042983159.0
+                  },
+                  {
+                    "hashAlgorithm": "SHA-256",
+                    "logDescription": "Cloudflare 'Nimbus2025'",
+                    "logId": "CCFB0F6A85710965FE959B53CEE9B27C22E9855C0D978DB6A97E54C0FE4C0DB0",
+                    "origin": "Embedded in certificate",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022100A54983B5262F0BDBA4E43AEB5B00DE0C11330D3A185A04D9D93E3B096EF6F5EB022027DCBAAC81F1F9AACED2ACEB49D4DC0A698A277392F0CDB3BF68087B87CC7319",
+                    "status": "Verified",
+                    "timestamp": 1747042984307.0
+                  }
+                ],
+                "subjectName": "*.google.com",
+                "validFrom": 1747039378,
+                "validTo": 1754296977
+              },
+              "securityState": "secure",
+              "status": 200,
+              "statusText": "",
+              "timing": {
+                "connectEnd": -1,
+                "connectStart": -1,
+                "dnsEnd": -1,
+                "dnsStart": -1,
+                "proxyEnd": -1,
+                "proxyStart": -1,
+                "pushEnd": 0,
+                "pushStart": 0,
+                "receiveHeadersEnd": 195.814,
+                "receiveHeadersStart": 195.462,
+                "requestTime": 154258.005119,
+                "sendEnd": 2.367,
+                "sendStart": 2.087,
+                "sslEnd": -1,
+                "sslStart": -1,
+                "workerFetchStart": -1,
+                "workerReady": -1,
+                "workerRespondWithSettled": -1,
+                "workerStart": -1
+              },
+              "url": "https://play.google.com/log?format=json&hasfast=true"
+            },
+            "timestamp": 154258.202454,
+            "type": "XHR"
+          }
+        },
+        {
+          "method": "Network.dataReceived",
+          "params": {
+            "dataLength": 131,
+            "encodedDataLength": 0,
+            "requestId": "84863.60",
+            "timestamp": 154258.202581
+          }
+        },
+        {
+          "method": "Network.loadingFinished",
+          "params": {
+            "encodedDataLength": 195,
+            "requestId": "84863.60",
+            "timestamp": 154258.201722
+          }
+        }
+      ],
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:48.436398",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:48.436381"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:50.454606",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:50.454592"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:52.477480",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:52.477452"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:54.497504",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:54.497497"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:56.519490",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:56.519476"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:08:58.541833",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:08:58.541812"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:09:00.573502",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:09:00.573485"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:09:02.597137",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:09:02.597119"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    },
+    {
+      "timestamp": "2025-06-03T11:09:04.632406",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM",
+        "title": "youtube - Google qidiruvi",
+        "timestamp": "2025-06-03T11:09:04.632392"
+      },
+      "url": "https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDE2NDZqMGoyqAIAsAIB&sourceid=chrome&ie=UTF-8&sei=aJE-aNG9GNGkwPAP_LLY-QM"
+    }
+  ]
+}

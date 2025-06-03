@@ -22,6 +22,17 @@ class SimpleBrowserMonitor:
         print("Setting up Chrome browser...")
 
         chrome_options = Options()
+
+        # Try to use default Chrome profile (with all your bookmarks, extensions, etc.)
+        try:
+            chrome_options.add_argument(
+                "--user-data-dir=/Users/sanjarbeksaidov/Library/Application Support/Google/Chrome"
+            )
+            chrome_options.add_argument("--profile-directory=Default")
+            print("Using default Chrome profile...")
+        except Exception as e:
+            print(f"Could not use default profile, using temporary: {e}")
+
         chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 
@@ -37,24 +48,13 @@ class SimpleBrowserMonitor:
         self.activities.append(log_entry)
         print(log_entry)
 
-    def get_url(self):
-        """Get URL from user input"""
-        url = input("\n🌐 Enter URL to visit (or 'quit' to exit): ").strip()
-
-        if url.lower() == "quit":
-            return None
-
-        if not url.startswith(("http://", "https://")):
-            url = "https://" + url
-
-        return url
-
     def monitor_activity(self):
         """Monitor basic browser activity"""
         print("\n" + "=" * 50)
         print("🔍 Monitoring your browser activity...")
-        print("You can now interact with the browser normally.")
-        print("Press Ctrl+C here to stop monitoring.")
+        print("🌐 Browse normally - type URLs, click links, etc.")
+        print("⏹️  Press Ctrl+C here to stop monitoring")
+        print("🚪 Or close the Chrome window to end")
         print("=" * 50)
 
         last_url = ""
@@ -95,20 +95,13 @@ class SimpleBrowserMonitor:
         try:
             self.setup_browser()
 
-            while True:
-                url = self.get_url()
-                if url is None:
-                    break
+            # Open Chrome with a completely blank page
+            print("🌐 Opening Chrome browser...")
+            self.driver.get("about:blank")
+            self.log_activity("🚀 Browser opened - Ready for monitoring")
 
-                self.log_activity(f"🔗 Navigating to: {url}")
-                self.driver.get(url)
-
-                # Start monitoring
-                self.monitor_activity()
-
-                # Ask to continue
-                if input("\n➡️  Visit another URL? (y/n): ").lower() != "y":
-                    break
+            # Start monitoring immediately
+            self.monitor_activity()
 
         except Exception as e:
             print(f"❌ Error: {e}")

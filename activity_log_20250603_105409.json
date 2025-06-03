@@ -1,0 +1,1212 @@
+{
+  "session_start": "2025-06-03T10:53:37.160901",
+  "session_end": "2025-06-03T10:54:09.915484",
+  "total_activities": 26,
+  "activities": [
+    {
+      "timestamp": "2025-06-03T10:53:39.791103",
+      "type": "BROWSER_OPENED",
+      "details": "Chrome browser opened for monitoring",
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:39.801719",
+      "type": "URL_CHANGE",
+      "details": {
+        "from": "",
+        "to": "about:blank"
+      },
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:39.807945",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "about:blank",
+        "title": "",
+        "timestamp": "2025-06-03T10:53:39.807937"
+      },
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:39.810723",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.policyUpdated",
+          "params": {}
+        }
+      ],
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:41.838930",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "about:blank",
+        "title": "",
+        "timestamp": "2025-06-03T10:53:41.838913"
+      },
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:43.858701",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "about:blank",
+        "title": "",
+        "timestamp": "2025-06-03T10:53:43.858690"
+      },
+      "url": "about:blank"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:51.421469",
+      "type": "URL_CHANGE",
+      "details": {
+        "from": "about:blank",
+        "to": "https://www.youtube.com/?themeRefresh=1"
+      },
+      "url": "https://www.youtube.com/?themeRefresh=1"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:51.423879",
+      "type": "TITLE_CHANGE",
+      "details": {
+        "from": "",
+        "to": "YouTube"
+      },
+      "url": "https://www.youtube.com/?themeRefresh=1"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:51.428549",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/?themeRefresh=1",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:53:51.428544"
+      },
+      "url": "https://www.youtube.com/?themeRefresh=1"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:51.431342",
+      "type": "BROWSER_LOGS",
+      "details": [
+        {
+          "level": "SEVERE",
+          "message": "https://rr1---sn-t0a7lnee.googlevideo.com/videoplayback?expire=7687551163&ei=vGzSAcydcvMvgF1Psp6rOQF&ip=69.53.96.69&id=o-AF4GLpb0nMWNT9yJ1u1svgzDNcYNTsJHmdwx6aqi17pHt&itag=18&source=youtube&requiressl=yes&mh=X6&mm=190%2C81244%2C61427&mn=5cZXG%2C4Ml5m%2CNCftQ&ms=5cZXG%2C4Ml5m%2CNCftQ&mv=b&mvi=3&pl=34&initcwndbps=7226833&siu=3&spc=3IZxQ_ED7PJYaFkQ23Jd2Z6O-SfBKAjLDTa5vkh4xyNV&vprv=3&svpuc=3&mime=video%2Fmp4&ns=YXZeWaMj4iydpr4VsS5drIMq&cnr=34&ratebypass=yes&dur=94061752&lmt=8710195749499006&mt=7687551163&fvip=3&c=WEB&txp=7226833&n=TnuM6bxHRncAjitO&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Csiu%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg - Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+          "source": "network",
+          "timestamp": 1748930031033
+        },
+        {
+          "level": "SEVERE",
+          "message": "https://rr1---sn-t0a7lnee.googlevideo.com/videoplayback?expire=7687551163&ei=vGzSAcydcvMvgF1Psp6rOQF&ip=69.53.96.69&id=o-AF4GLpb0nMWNT9yJ1u1svgzDNcYNTsJHmdwx6aqi17pHt&itag=18&source=youtube&requiressl=yes&mh=X6&mm=190%2C81244%2C61427&mn=5cZXG%2C4Ml5m%2CNCftQ&ms=5cZXG%2C4Ml5m%2CNCftQ&mv=b&mvi=3&pl=34&ctier=L&initcwndbps=7226833&siu=3&spc=3IZxQ_ED7PJYaFkQ23Jd2Z6O-SfBKAjLDTa5vkh4xyNV&vprv=3&svpuc=3&mime=video%2Fmp4&ns=YXZeWaMj4iydpr4VsS5drIMq&cnr=34&ratebypass=yes&dur=94061752&lmt=8710195749499006&mt=7687551163&fvip=3&c=WEB&txp=7226833&n=TnuM6bxHRncAjitO&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cctier%2Csiu%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg - Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+          "source": "network",
+          "timestamp": 1748930031106
+        },
+        {
+          "level": "SEVERE",
+          "message": "https://rr1---sn-t0a7lnee.googlevideo.com/videoplayback?expire=7687551163&ei=vGzSAcydcvMvgF1Psp6rOQF&ip=69.53.96.69&id=o-AF4GLpb0nMWNT9yJ1u1svgzDNcYNTsJHmdwx6aqi17pHt&itag=18&source=youtube&requiressl=yes&mh=X6&mm=190%2C81244%2C61427&mn=5cZXG%2C4Ml5m%2CNCftQ&ms=5cZXG%2C4Ml5m%2CNCftQ&mv=b&mvi=3&pl=34&initcwndbps=7226833&siu=3&spc=3IZxQ_ED7PJYaFkQ23Jd2Z6O-SfBKAjLDTa5vkh4xyNV&vprv=3&svpuc=3&mime=video%2Fmp4&ns=YXZeWaMj4iydpr4VsS5drIMq&cnr=34&ratebypass=yes&dur=94061752&lmt=8710195749499006&mt=7687551163&fvip=3&c=WEB&txp=7226833&n=TnuM6bxHRncAjitO&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Csiu%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg - Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+          "source": "network",
+          "timestamp": 1748930031106
+        },
+        {
+          "level": "SEVERE",
+          "message": "https://rr1---sn-t0a7lnee.googlevideo.com/videoplayback?expire=7687551163&ei=vGzSAcydcvMvgF1Psp6rOQF&ip=69.53.96.69&id=o-AF4GLpb0nMWNT9yJ1u1svgzDNcYNTsJHmdwx6aqi17pHt&itag=18&source=youtube&requiressl=yes&mh=X6&mm=190%2C81244%2C61427&mn=5cZXG%2C4Ml5m%2CNCftQ&ms=5cZXG%2C4Ml5m%2CNCftQ&mv=b&mvi=3&pl=34&initcwndbps=7226833&siu=3&spc=3IZxQ_ED7PJYaFkQ23Jd2Z6O-SfBKAjLDTa5vkh4xyNV&vprv=3&svpuc=3&mime=video%2Fmp4&ns=YXZeWaMj4iydpr4VsS5drIMq&cnr=34&ratebypass=yes&dur=94061752&lmt=8710195749499006&mt=7687551163&fvip=3&c=WEB&txp=7226833&n=TnuM6bxHRncAjitO&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Csiu%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg - Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+          "source": "network",
+          "timestamp": 1748930031134
+        },
+        {
+          "level": "SEVERE",
+          "message": "https://rr1---sn-t0a7lnee.googlevideo.com/videoplayback?expire=7687551163&ei=vGzSAcydcvMvgF1Psp6rOQF&ip=69.53.96.69&id=o-AF4GLpb0nMWNT9yJ1u1svgzDNcYNTsJHmdwx6aqi17pHt&itag=18&source=youtube&requiressl=yes&mh=X6&mm=190%2C81244%2C61427&mn=5cZXG%2C4Ml5m%2CNCftQ&ms=5cZXG%2C4Ml5m%2CNCftQ&mv=b&mvi=3&pl=34&ctier=L&initcwndbps=7226833&siu=3&spc=3IZxQ_ED7PJYaFkQ23Jd2Z6O-SfBKAjLDTa5vkh4xyNV&vprv=3&svpuc=3&mime=video%2Fmp4&ns=YXZeWaMj4iydpr4VsS5drIMq&cnr=34&ratebypass=yes&dur=94061752&lmt=8710195749499006&mt=7687551163&fvip=3&c=WEB&txp=7226833&n=TnuM6bxHRncAjitO&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cctier%2Csiu%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Ccnr%2Cratebypass%2Cdur%2Clmt&sig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg&lsparams=mh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Cinitcwndbps&lsig=YT4XS5xGU9pSrce1wJFXD8tM0MiPj0X718zTddZtZrXFXE4kOd6REQWjBoJBpRl78Avl4nuu6Zf6gYMcQmN4nvuq2MS3eoPwautMBhx9T-jg - Failed to load resource: net::ERR_NAME_NOT_RESOLVED",
+          "source": "network",
+          "timestamp": 1748930031134
+        }
+      ],
+      "url": "https://www.youtube.com/?themeRefresh=1"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:51.492342",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.requestWillBeSentExtraInfo",
+          "params": {
+            "associatedCookies": [
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1748931827.017595,
+                  "httpOnly": true,
+                  "name": "GPS",
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "secure": true,
+                  "session": false,
+                  "size": 4,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "1"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": -1,
+                  "httpOnly": true,
+                  "name": "YSC",
+                  "partitionKey": {
+                    "hasCrossSiteAncestor": false,
+                    "topLevelSite": "https://youtube.com"
+                  },
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "sameSite": "None",
+                  "secure": true,
+                  "session": true,
+                  "size": 14,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "NFlEPCk3TSo"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1764482029.218485,
+                  "httpOnly": true,
+                  "name": "VISITOR_INFO1_LIVE",
+                  "partitionKey": {
+                    "hasCrossSiteAncestor": false,
+                    "topLevelSite": "https://youtube.com"
+                  },
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "sameSite": "None",
+                  "secure": true,
+                  "session": false,
+                  "size": 29,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "CvUlcgk-OJY"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1764482029.218505,
+                  "httpOnly": true,
+                  "name": "VISITOR_PRIVACY_METADATA",
+                  "partitionKey": {
+                    "hasCrossSiteAncestor": false,
+                    "topLevelSite": "https://youtube.com"
+                  },
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "sameSite": "None",
+                  "secure": true,
+                  "session": false,
+                  "size": 44,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "CgJVWhIEGgAgIw%3D%3D"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1783490030.844075,
+                  "httpOnly": false,
+                  "name": "PREF",
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "secure": true,
+                  "session": false,
+                  "size": 44,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "f4=4000000&f6=40000000&tz=Asia.Samarkand"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1764482029.218412,
+                  "httpOnly": true,
+                  "name": "__Secure-ROLLOUT_TOKEN",
+                  "partitionKey": {
+                    "hasCrossSiteAncestor": false,
+                    "topLevelSite": "https://youtube.com"
+                  },
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "sameSite": "None",
+                  "secure": true,
+                  "session": false,
+                  "size": 64,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "CKK37pbit_u3lAEQr7qGiMjUjQMY2bqLicjUjQM%3D"
+                },
+                "exemptionReason": "None"
+              }
+            ],
+            "clientSecurityState": {
+              "initiatorIPAddressSpace": "Public",
+              "initiatorIsSecureContext": true,
+              "privateNetworkRequestPolicy": "PreflightWarn"
+            },
+            "connectTiming": {
+              "requestTime": 153364.567821
+            },
+            "headers": {
+              ":authority": "www.youtube.com",
+              ":method": "GET",
+              ":path": "/manifest.webmanifest",
+              ":scheme": "https",
+              "accept": "*/*",
+              "accept-encoding": "gzip, deflate, br, zstd",
+              "accept-language": "en-US,en;q=0.9",
+              "cookie": "GPS=1; YSC=NFlEPCk3TSo; VISITOR_INFO1_LIVE=CvUlcgk-OJY; VISITOR_PRIVACY_METADATA=CgJVWhIEGgAgIw%3D%3D; PREF=f4=4000000&f6=40000000&tz=Asia.Samarkand; __Secure-ROLLOUT_TOKEN=CKK37pbit_u3lAEQr7qGiMjUjQMY2bqLicjUjQM%3D",
+              "priority": "u=2",
+              "referer": "https://www.youtube.com/?themeRefresh=1",
+              "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+              "sec-ch-ua-arch": "\"arm\"",
+              "sec-ch-ua-bitness": "\"64\"",
+              "sec-ch-ua-form-factors": "\"Desktop\"",
+              "sec-ch-ua-full-version": "\"137.0.7151.56\"",
+              "sec-ch-ua-full-version-list": "\"Google Chrome\";v=\"137.0.7151.56\", \"Chromium\";v=\"137.0.7151.56\", \"Not/A)Brand\";v=\"24.0.0.0\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-model": "\"\"",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-ch-ua-platform-version": "\"15.5.0\"",
+              "sec-ch-ua-wow64": "?0",
+              "sec-fetch-dest": "manifest",
+              "sec-fetch-mode": "cors",
+              "sec-fetch-site": "same-origin",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+              "x-client-data": "CLOOywE="
+            },
+            "requestId": "78097.341",
+            "siteHasCookieInOtherPartition": false
+          }
+        },
+        {
+          "method": "Network.requestWillBeSent",
+          "params": {
+            "documentURL": "https://www.youtube.com/?themeRefresh=1",
+            "frameId": "3CA394B745C3E51B330227FB90537093",
+            "hasUserGesture": false,
+            "initiator": {
+              "type": "other"
+            },
+            "loaderId": "E5ED1C058C9C59E8618022632B21EF90",
+            "redirectHasExtraInfo": false,
+            "request": {
+              "headers": {
+                "Referer": "https://www.youtube.com/?themeRefresh=1",
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+                "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+                "sec-ch-ua-arch": "\"arm\"",
+                "sec-ch-ua-bitness": "\"64\"",
+                "sec-ch-ua-form-factors": "\"Desktop\"",
+                "sec-ch-ua-full-version": "\"137.0.7151.56\"",
+                "sec-ch-ua-full-version-list": "\"Google Chrome\";v=\"137.0.7151.56\", \"Chromium\";v=\"137.0.7151.56\", \"Not/A)Brand\";v=\"24.0.0.0\"",
+                "sec-ch-ua-mobile": "?0",
+                "sec-ch-ua-model": "\"\"",
+                "sec-ch-ua-platform": "\"macOS\"",
+                "sec-ch-ua-platform-version": "\"15.5.0\"",
+                "sec-ch-ua-wow64": "?0"
+              },
+              "initialPriority": "High",
+              "isSameSite": true,
+              "method": "GET",
+              "mixedContentType": "none",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "url": "https://www.youtube.com/s/desktop/9fd1b038/img/logos/favicon.ico"
+            },
+            "requestId": "78097.342",
+            "timestamp": 153364.568143,
+            "type": "Other",
+            "wallTime": 1748930031.4109
+          }
+        },
+        {
+          "method": "Network.requestWillBeSentExtraInfo",
+          "params": {
+            "associatedCookies": [
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1748931827.017595,
+                  "httpOnly": true,
+                  "name": "GPS",
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "secure": true,
+                  "session": false,
+                  "size": 4,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "1"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": -1,
+                  "httpOnly": true,
+                  "name": "YSC",
+                  "partitionKey": {
+                    "hasCrossSiteAncestor": false,
+                    "topLevelSite": "https://youtube.com"
+                  },
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "sameSite": "None",
+                  "secure": true,
+                  "session": true,
+                  "size": 14,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "NFlEPCk3TSo"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1764482029.218485,
+                  "httpOnly": true,
+                  "name": "VISITOR_INFO1_LIVE",
+                  "partitionKey": {
+                    "hasCrossSiteAncestor": false,
+                    "topLevelSite": "https://youtube.com"
+                  },
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "sameSite": "None",
+                  "secure": true,
+                  "session": false,
+                  "size": 29,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "CvUlcgk-OJY"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1764482029.218505,
+                  "httpOnly": true,
+                  "name": "VISITOR_PRIVACY_METADATA",
+                  "partitionKey": {
+                    "hasCrossSiteAncestor": false,
+                    "topLevelSite": "https://youtube.com"
+                  },
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "sameSite": "None",
+                  "secure": true,
+                  "session": false,
+                  "size": 44,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "CgJVWhIEGgAgIw%3D%3D"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1783490030.844075,
+                  "httpOnly": false,
+                  "name": "PREF",
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "secure": true,
+                  "session": false,
+                  "size": 44,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "f4=4000000&f6=40000000&tz=Asia.Samarkand"
+                },
+                "exemptionReason": "None"
+              },
+              {
+                "blockedReasons": [],
+                "cookie": {
+                  "domain": ".youtube.com",
+                  "expires": 1764482029.218412,
+                  "httpOnly": true,
+                  "name": "__Secure-ROLLOUT_TOKEN",
+                  "partitionKey": {
+                    "hasCrossSiteAncestor": false,
+                    "topLevelSite": "https://youtube.com"
+                  },
+                  "path": "/",
+                  "priority": "Medium",
+                  "sameParty": false,
+                  "sameSite": "None",
+                  "secure": true,
+                  "session": false,
+                  "size": 64,
+                  "sourcePort": 443,
+                  "sourceScheme": "Secure",
+                  "value": "CKK37pbit_u3lAEQr7qGiMjUjQMY2bqLicjUjQM%3D"
+                },
+                "exemptionReason": "None"
+              }
+            ],
+            "clientSecurityState": {
+              "initiatorIPAddressSpace": "Public",
+              "initiatorIsSecureContext": true,
+              "privateNetworkRequestPolicy": "PreflightWarn"
+            },
+            "connectTiming": {
+              "requestTime": 153364.568344
+            },
+            "headers": {
+              ":authority": "www.youtube.com",
+              ":method": "GET",
+              ":path": "/s/desktop/9fd1b038/img/logos/favicon.ico",
+              ":scheme": "https",
+              "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+              "accept-encoding": "gzip, deflate, br, zstd",
+              "accept-language": "en-US,en;q=0.9",
+              "cookie": "GPS=1; YSC=NFlEPCk3TSo; VISITOR_INFO1_LIVE=CvUlcgk-OJY; VISITOR_PRIVACY_METADATA=CgJVWhIEGgAgIw%3D%3D; PREF=f4=4000000&f6=40000000&tz=Asia.Samarkand; __Secure-ROLLOUT_TOKEN=CKK37pbit_u3lAEQr7qGiMjUjQMY2bqLicjUjQM%3D",
+              "priority": "u=1, i",
+              "referer": "https://www.youtube.com/?themeRefresh=1",
+              "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+              "sec-ch-ua-arch": "\"arm\"",
+              "sec-ch-ua-bitness": "\"64\"",
+              "sec-ch-ua-form-factors": "\"Desktop\"",
+              "sec-ch-ua-full-version": "\"137.0.7151.56\"",
+              "sec-ch-ua-full-version-list": "\"Google Chrome\";v=\"137.0.7151.56\", \"Chromium\";v=\"137.0.7151.56\", \"Not/A)Brand\";v=\"24.0.0.0\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-model": "\"\"",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-ch-ua-platform-version": "\"15.5.0\"",
+              "sec-ch-ua-wow64": "?0",
+              "sec-fetch-dest": "image",
+              "sec-fetch-mode": "no-cors",
+              "sec-fetch-site": "same-origin",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+              "x-client-data": "CLOOywE="
+            },
+            "requestId": "78097.342",
+            "siteHasCookieInOtherPartition": false
+          }
+        }
+      ],
+      "url": "https://www.youtube.com/?themeRefresh=1"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:53.510263",
+      "type": "URL_CHANGE",
+      "details": {
+        "from": "https://www.youtube.com/?themeRefresh=1",
+        "to": "https://www.youtube.com/"
+      },
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:53.514634",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:53:53.514628"
+      },
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:53.517355",
+      "type": "BROWSER_LOGS",
+      "details": [
+        {
+          "level": "INFO",
+          "message": "https://www.youtube.com/ - Banner not shown: beforeinstallpromptevent.preventDefault() called. The page must call beforeinstallpromptevent.prompt() to show the banner.",
+          "source": "other",
+          "timestamp": 1748930033502
+        }
+      ],
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:53.524034",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.dataReceived",
+          "params": {
+            "dataLength": 0,
+            "encodedDataLength": 1909,
+            "requestId": "78097.355",
+            "timestamp": 153366.613259
+          }
+        },
+        {
+          "method": "Network.loadingFinished",
+          "params": {
+            "encodedDataLength": 55807,
+            "requestId": "78097.355",
+            "timestamp": 153366.608934
+          }
+        },
+        {
+          "method": "Network.requestWillBeSentExtraInfo",
+          "params": {
+            "associatedCookies": [],
+            "clientSecurityState": {
+              "initiatorIPAddressSpace": "Public",
+              "initiatorIsSecureContext": true,
+              "privateNetworkRequestPolicy": "PreflightWarn"
+            },
+            "connectTiming": {
+              "requestTime": 153366.010086
+            },
+            "headers": {
+              ":authority": "www.google.co.uz",
+              ":method": "GET",
+              ":path": "/pagead/lvz?evtid=ACd6Ktyh6B6E4y_uAn31REnap9yvDqVldMr03JRXXOa09CaJGR1SdK0xe34XZjpIikNii-EDz72ViS3F3CDySZ9vqKtdo-ZIaQ&req_ts=1748930029&pg=MainAppBootstrap%3AHome&az=1&sigh=AB9vU4286ZwPWnwjsH7aEzrbSPFtUfdGGA",
+              ":scheme": "https",
+              "accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
+              "accept-encoding": "gzip, deflate, br, zstd",
+              "accept-language": "en-US,en;q=0.9",
+              "priority": "i",
+              "referer": "https://www.youtube.com/",
+              "sec-ch-ua": "\"Google Chrome\";v=\"137\", \"Chromium\";v=\"137\", \"Not/A)Brand\";v=\"24\"",
+              "sec-ch-ua-arch": "\"arm\"",
+              "sec-ch-ua-bitness": "\"64\"",
+              "sec-ch-ua-form-factors": "\"Desktop\"",
+              "sec-ch-ua-full-version": "\"137.0.7151.56\"",
+              "sec-ch-ua-full-version-list": "\"Google Chrome\";v=\"137.0.7151.56\", \"Chromium\";v=\"137.0.7151.56\", \"Not/A)Brand\";v=\"24.0.0.0\"",
+              "sec-ch-ua-mobile": "?0",
+              "sec-ch-ua-model": "\"\"",
+              "sec-ch-ua-platform": "\"macOS\"",
+              "sec-ch-ua-platform-version": "\"15.5.0\"",
+              "sec-ch-ua-wow64": "?0",
+              "sec-fetch-dest": "image",
+              "sec-fetch-mode": "no-cors",
+              "sec-fetch-site": "cross-site",
+              "sec-fetch-storage-access": "active",
+              "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36",
+              "x-client-data": "CLOOywE="
+            },
+            "requestId": "78097.352",
+            "siteHasCookieInOtherPartition": false
+          }
+        }
+      ],
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:55.557032",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:53:55.557006"
+      },
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:55.566668",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.responseReceived",
+          "params": {
+            "frameId": "3CA394B745C3E51B330227FB90537093",
+            "hasExtraInfo": true,
+            "loaderId": "E5ED1C058C9C59E8618022632B21EF90",
+            "requestId": "78097.380",
+            "response": {
+              "alternateProtocolUsage": "unspecifiedReason",
+              "charset": "",
+              "connectionId": 886,
+              "connectionReused": false,
+              "encodedDataLength": 458,
+              "fromDiskCache": false,
+              "fromPrefetchCache": false,
+              "fromServiceWorker": false,
+              "headers": {
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "age": "730",
+                "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                "cache-control": "public, max-age=900",
+                "content-length": "29",
+                "content-type": "text/javascript",
+                "cross-origin-opener-policy-report-only": "same-origin; report-to=\"ads-doubleclick-media\"",
+                "cross-origin-resource-policy": "cross-origin",
+                "date": "Tue, 03 Jun 2025 05:41:45 GMT",
+                "expires": "Tue, 03 Jun 2025 05:56:45 GMT",
+                "last-modified": "Thu, 12 Dec 2013 23:40:16 GMT",
+                "report-to": "{\"group\":\"ads-doubleclick-media\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/ads-doubleclick-media\"}]}",
+                "server": "sffe",
+                "timing-allow-origin": "*",
+                "x-content-type-options": "nosniff",
+                "x-xss-protection": "0"
+              },
+              "mimeType": "text/javascript",
+              "protocol": "h2",
+              "remoteIPAddress": "216.58.211.230",
+              "remotePort": 443,
+              "responseTime": 1748930035165.726,
+              "securityDetails": {
+                "certificateId": 0,
+                "certificateTransparencyCompliance": "compliant",
+                "cipher": "AES_128_GCM",
+                "encryptedClientHello": false,
+                "issuer": "WR2",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "protocol": "TLS 1.3",
+                "sanList": [
+                  "*.doubleclick.net",
+                  "*.2mdn.net",
+                  "*.au.doubleclick.net",
+                  "*.cc-dt.com",
+                  "*.de.doubleclick.net",
+                  "doubleclick.com",
+                  "*.doubleclick.com",
+                  "*.fls.doubleclick.net",
+                  "*.fr.doubleclick.net",
+                  "*.jp.doubleclick.net",
+                  "*.uk.doubleclick.net",
+                  "ad.mo.doubleclick.net",
+                  "doubleclick.net"
+                ],
+                "serverSignatureAlgorithm": 1027,
+                "signedCertificateTimestampList": [
+                  {
+                    "hashAlgorithm": "SHA-256",
+                    "logDescription": "Google 'Argon2025h2' log",
+                    "logId": "12F14E34BD53724C840619C38F3F7A13F8E7B56287889C6D300584EBE586263A",
+                    "origin": "Embedded in certificate",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502210086DE91E19E22FD2C53170FAD910739D0DAE30A04947C248DA51FA750E1233005022027E88376D8DB8010A93984EE1DE85C9B2ED480C027B1C29EF15C7B6535E79A46",
+                    "status": "Verified",
+                    "timestamp": 1747042976840.0
+                  },
+                  {
+                    "hashAlgorithm": "SHA-256",
+                    "logDescription": "DigiCert Yeti2025 Log",
+                    "logId": "7D591E12E1782A7B1C61677C5EFDF8D0875C14A04E959EB9032FD90E8C2E79B8",
+                    "origin": "Embedded in certificate",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100D4E7A7A92A9F9BCE51FD2924EFBDC18AC4680ED0E9EBD3425E21638085FA7A4A022100CB36B43ADEBF6EE237FCB0E0B7B5687A1958478D3C0DCA75AD6C1D2B40EF822C",
+                    "status": "Verified",
+                    "timestamp": 1747042977890.0
+                  }
+                ],
+                "subjectName": "*.doubleclick.net",
+                "validFrom": 1747039375,
+                "validTo": 1754296974
+              },
+              "securityState": "secure",
+              "status": 200,
+              "statusText": "",
+              "timing": {
+                "connectEnd": 607.839,
+                "connectStart": 154.951,
+                "dnsEnd": 154.844,
+                "dnsStart": 0.209,
+                "proxyEnd": -1,
+                "proxyStart": -1,
+                "pushEnd": 0,
+                "pushStart": 0,
+                "receiveHeadersEnd": 820.224,
+                "receiveHeadersStart": 820.089,
+                "requestTime": 153367.502974,
+                "sendEnd": 607.987,
+                "sendStart": 607.928,
+                "sslEnd": 607.835,
+                "sslStart": 428.192,
+                "workerFetchStart": -1,
+                "workerReady": -1,
+                "workerRespondWithSettled": -1,
+                "workerStart": -1
+              },
+              "url": "https://static.doubleclick.net/instream/ad_status.js"
+            },
+            "timestamp": 153368.323747,
+            "type": "Script"
+          }
+        },
+        {
+          "method": "Network.dataReceived",
+          "params": {
+            "dataLength": 29,
+            "encodedDataLength": 0,
+            "requestId": "78097.380",
+            "timestamp": 153368.323773
+          }
+        },
+        {
+          "method": "Network.loadingFinished",
+          "params": {
+            "encodedDataLength": 496,
+            "requestId": "78097.380",
+            "timestamp": 153368.323406
+          }
+        }
+      ],
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:57.588762",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:53:57.588753"
+      },
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:59.676241",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:53:59.676221"
+      },
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:59.679433",
+      "type": "BROWSER_LOGS",
+      "details": [
+        {
+          "level": "SEVERE",
+          "message": "https://www.youtube.com/ - requestStorageAccessFor: Permission denied.",
+          "source": "security",
+          "timestamp": 1748930039667
+        },
+        {
+          "level": "SEVERE",
+          "message": "https://www.youtube.com/ - requestStorageAccessFor: Permission denied.",
+          "source": "security",
+          "timestamp": 1748930039667
+        },
+        {
+          "level": "SEVERE",
+          "message": "https://www.youtube.com/ - requestStorageAccessFor: Permission denied.",
+          "source": "security",
+          "timestamp": 1748930039667
+        }
+      ],
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:53:59.704109",
+      "type": "NETWORK_ACTIVITY",
+      "details": [
+        {
+          "method": "Network.responseReceivedExtraInfo",
+          "params": {
+            "blockedCookies": [],
+            "cookiePartitionKey": {
+              "hasCrossSiteAncestor": false,
+              "topLevelSite": "https://youtube.com"
+            },
+            "cookiePartitionKeyOpaque": false,
+            "exemptedCookies": [],
+            "headers": {
+              "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+              "access-control-allow-credentials": "true",
+              "access-control-allow-origin": "https://www.youtube.com",
+              "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+              "cache-control": "private, max-age=31536000",
+              "content-length": "0",
+              "content-security-policy": "require-trusted-types-for 'script'",
+              "content-type": "application/binary",
+              "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"youtube_main\"",
+              "date": "Tue, 03 Jun 2025 05:53:58 GMT",
+              "expires": "Tue, 03 Jun 2025 05:53:58 GMT",
+              "location": "https://www.youtube.com/",
+              "origin-trial": "ApTXX1w2dkJZuuxlV9csQYg+9ZVXekg+mOu8mS9vb7/V2oeMLKqGC8blgR6ech+eqbhGAgLKPthyai7z89MdTAgAAACLeyJvcmlnaW4iOiJodHRwczovL3d3dy55b3V0dWJlLmNvbTo0NDMiLCJmZWF0dXJlIjoiRG9jdW1lbnRQb2xpY3lJbmNsdWRlSlNDYWxsU3RhY2tzSW5DcmFzaFJlcG9ydHMiLCJleHBpcnkiOjE3NDk1MTM2MDAsImlzU3ViZG9tYWluIjp0cnVlfQ==\nAmhMBR6zCLzDDxpW+HfpP67BqwIknWnyMOXOQGfzYswFmJe+fgaI6XZgAzcxOrzNtP7hEDsOo1jdjFnVr2IdxQ4AAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTc1ODA2NzE5OSwiaXNTdWJkb21haW4iOnRydWV9",
+              "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*",
+              "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+              "server": "ESF",
+              "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+              "vary": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+              "x-content-type-options": "nosniff",
+              "x-frame-options": "SAMEORIGIN",
+              "x-xss-protection": "0"
+            },
+            "requestId": "78097.391",
+            "resourceIPAddressSpace": "Public",
+            "statusCode": 301
+          }
+        },
+        {
+          "method": "Network.requestWillBeSent",
+          "params": {
+            "documentURL": "https://www.youtube.com/",
+            "frameId": "3CA394B745C3E51B330227FB90537093",
+            "hasUserGesture": false,
+            "initiator": {
+              "type": "other"
+            },
+            "loaderId": "E5ED1C058C9C59E8618022632B21EF90",
+            "redirectHasExtraInfo": true,
+            "redirectResponse": {
+              "alternateProtocolUsage": "alternativeJobWonRace",
+              "charset": "",
+              "connectionId": 965,
+              "connectionReused": false,
+              "encodedDataLength": 27,
+              "fromDiskCache": false,
+              "fromPrefetchCache": false,
+              "fromServiceWorker": false,
+              "headers": {
+                "accept-ch": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+                "access-control-allow-credentials": "true",
+                "access-control-allow-origin": "https://www.youtube.com",
+                "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                "cache-control": "private, max-age=31536000",
+                "content-length": "0",
+                "content-security-policy": "require-trusted-types-for 'script'",
+                "content-type": "application/binary",
+                "cross-origin-opener-policy": "same-origin-allow-popups; report-to=\"youtube_main\"",
+                "date": "Tue, 03 Jun 2025 05:53:58 GMT",
+                "expires": "Tue, 03 Jun 2025 05:53:58 GMT",
+                "location": "https://www.youtube.com/",
+                "origin-trial": "ApTXX1w2dkJZuuxlV9csQYg+9ZVXekg+mOu8mS9vb7/V2oeMLKqGC8blgR6ech+eqbhGAgLKPthyai7z89MdTAgAAACLeyJvcmlnaW4iOiJodHRwczovL3d3dy55b3V0dWJlLmNvbTo0NDMiLCJmZWF0dXJlIjoiRG9jdW1lbnRQb2xpY3lJbmNsdWRlSlNDYWxsU3RhY2tzSW5DcmFzaFJlcG9ydHMiLCJleHBpcnkiOjE3NDk1MTM2MDAsImlzU3ViZG9tYWluIjp0cnVlfQ==, AmhMBR6zCLzDDxpW+HfpP67BqwIknWnyMOXOQGfzYswFmJe+fgaI6XZgAzcxOrzNtP7hEDsOo1jdjFnVr2IdxQ4AAAB4eyJvcmlnaW4iOiJodHRwczovL3lvdXR1YmUuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWaWV3WFJlcXVlc3RlZFdpdGhEZXByZWNhdGlvbiIsImV4cGlyeSI6MTc1ODA2NzE5OSwiaXNTdWJkb21haW4iOnRydWV9",
+                "permissions-policy": "ch-ua-arch=*, ch-ua-bitness=*, ch-ua-full-version=*, ch-ua-full-version-list=*, ch-ua-model=*, ch-ua-wow64=*, ch-ua-form-factors=*, ch-ua-platform=*, ch-ua-platform-version=*",
+                "report-to": "{\"group\":\"youtube_main\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/youtube_main\"}]}",
+                "server": "ESF",
+                "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                "vary": "Sec-CH-UA-Arch, Sec-CH-UA-Bitness, Sec-CH-UA-Full-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Model, Sec-CH-UA-WoW64, Sec-CH-UA-Form-Factors, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version",
+                "x-content-type-options": "nosniff",
+                "x-frame-options": "SAMEORIGIN",
+                "x-xss-protection": "0"
+              },
+              "mimeType": "application/binary",
+              "protocol": "h3",
+              "remoteIPAddress": "216.58.209.174",
+              "remotePort": 443,
+              "responseTime": 1748930038384.878,
+              "securityDetails": {
+                "certificateId": 0,
+                "certificateTransparencyCompliance": "compliant",
+                "cipher": "AES_128_GCM",
+                "encryptedClientHello": false,
+                "issuer": "WR2",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "protocol": "QUIC",
+                "sanList": [
+                  "*.google.com",
+                  "*.appengine.google.com",
+                  "*.bdn.dev",
+                  "*.origin-test.bdn.dev",
+                  "*.cloud.google.com",
+                  "*.crowdsource.google.com",
+                  "*.datacompute.google.com",
+                  "*.google.ca",
+                  "*.google.cl",
+                  "*.google.co.in",
+                  "*.google.co.jp",
+                  "*.google.co.uk",
+                  "*.google.com.ar",
+                  "*.google.com.au",
+                  "*.google.com.br",
+                  "*.google.com.co",
+                  "*.google.com.mx",
+                  "*.google.com.tr",
+                  "*.google.com.vn",
+                  "*.google.de",
+                  "*.google.es",
+                  "*.google.fr",
+                  "*.google.hu",
+                  "*.google.it",
+                  "*.google.nl",
+                  "*.google.pl",
+                  "*.google.pt",
+                  "*.googleapis.cn",
+                  "*.googlevideo.com",
+                  "*.gstatic.cn",
+                  "*.gstatic-cn.com",
+                  "googlecnapps.cn",
+                  "*.googlecnapps.cn",
+                  "googleapps-cn.com",
+                  "*.googleapps-cn.com",
+                  "gkecnapps.cn",
+                  "*.gkecnapps.cn",
+                  "googledownloads.cn",
+                  "*.googledownloads.cn",
+                  "recaptcha.net.cn",
+                  "*.recaptcha.net.cn",
+                  "recaptcha-cn.net",
+                  "*.recaptcha-cn.net",
+                  "widevine.cn",
+                  "*.widevine.cn",
+                  "ampproject.org.cn",
+                  "*.ampproject.org.cn",
+                  "ampproject.net.cn",
+                  "*.ampproject.net.cn",
+                  "google-analytics-cn.com",
+                  "*.google-analytics-cn.com",
+                  "googleadservices-cn.com",
+                  "*.googleadservices-cn.com",
+                  "googlevads-cn.com",
+                  "*.googlevads-cn.com",
+                  "googleapis-cn.com",
+                  "*.googleapis-cn.com",
+                  "googleoptimize-cn.com",
+                  "*.googleoptimize-cn.com",
+                  "doubleclick-cn.net",
+                  "*.doubleclick-cn.net",
+                  "*.fls.doubleclick-cn.net",
+                  "*.g.doubleclick-cn.net",
+                  "doubleclick.cn",
+                  "*.doubleclick.cn",
+                  "*.fls.doubleclick.cn",
+                  "*.g.doubleclick.cn",
+                  "dartsearch-cn.net",
+                  "*.dartsearch-cn.net",
+                  "googletraveladservices-cn.com",
+                  "*.googletraveladservices-cn.com",
+                  "googletagservices-cn.com",
+                  "*.googletagservices-cn.com",
+                  "googletagmanager-cn.com",
+                  "*.googletagmanager-cn.com",
+                  "googlesyndication-cn.com",
+                  "*.googlesyndication-cn.com",
+                  "*.safeframe.googlesyndication-cn.com",
+                  "app-measurement-cn.com",
+                  "*.app-measurement-cn.com",
+                  "gvt1-cn.com",
+                  "*.gvt1-cn.com",
+                  "gvt2-cn.com",
+                  "*.gvt2-cn.com",
+                  "2mdn-cn.net",
+                  "*.2mdn-cn.net",
+                  "googleflights-cn.net",
+                  "*.googleflights-cn.net",
+                  "admob-cn.com",
+                  "*.admob-cn.com",
+                  "googlesandbox-cn.com",
+                  "*.googlesandbox-cn.com",
+                  "*.safenup.googlesandbox-cn.com",
+                  "*.gstatic.com",
+                  "*.metric.gstatic.com",
+                  "*.gvt1.com",
+                  "*.gcpcdn.gvt1.com",
+                  "*.gvt2.com",
+                  "*.gcp.gvt2.com",
+                  "*.url.google.com",
+                  "*.youtube-nocookie.com",
+                  "*.ytimg.com",
+                  "ai.android",
+                  "android.com",
+                  "*.android.com",
+                  "*.flash.android.com",
+                  "g.cn",
+                  "*.g.cn",
+                  "g.co",
+                  "*.g.co",
+                  "goo.gl",
+                  "www.goo.gl",
+                  "google-analytics.com",
+                  "*.google-analytics.com",
+                  "google.com",
+                  "googlecommerce.com",
+                  "*.googlecommerce.com",
+                  "ggpht.cn",
+                  "*.ggpht.cn",
+                  "urchin.com",
+                  "*.urchin.com",
+                  "youtu.be",
+                  "youtube.com",
+                  "*.youtube.com",
+                  "music.youtube.com",
+                  "*.music.youtube.com",
+                  "youtubeeducation.com",
+                  "*.youtubeeducation.com",
+                  "youtubekids.com",
+                  "*.youtubekids.com",
+                  "yt.be",
+                  "*.yt.be",
+                  "android.clients.google.com",
+                  "*.android.google.cn",
+                  "*.chrome.google.cn",
+                  "*.developers.google.cn",
+                  "*.aistudio.google.com"
+                ],
+                "serverSignatureAlgorithm": 1027,
+                "signedCertificateTimestampList": [
+                  {
+                    "hashAlgorithm": "SHA-256",
+                    "logDescription": "Google 'Argon2025h2' log",
+                    "logId": "12F14E34BD53724C840619C38F3F7A13F8E7B56287889C6D300584EBE586263A",
+                    "origin": "Embedded in certificate",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502201CE09B52A98066965D3CAC955F890056EEFF83AFD85781CBE1C44D54BB984961022100E96C7DED747D277D771A5049719ABEFD4896D22608D1CB0A61A9D819A9F41B3C",
+                    "status": "Verified",
+                    "timestamp": 1747042983159.0
+                  },
+                  {
+                    "hashAlgorithm": "SHA-256",
+                    "logDescription": "Cloudflare 'Nimbus2025'",
+                    "logId": "CCFB0F6A85710965FE959B53CEE9B27C22E9855C0D978DB6A97E54C0FE4C0DB0",
+                    "origin": "Embedded in certificate",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022100A54983B5262F0BDBA4E43AEB5B00DE0C11330D3A185A04D9D93E3B096EF6F5EB022027DCBAAC81F1F9AACED2ACEB49D4DC0A698A277392F0CDB3BF68087B87CC7319",
+                    "status": "Verified",
+                    "timestamp": 1747042984307.0
+                  }
+                ],
+                "subjectName": "*.google.com",
+                "validFrom": 1747039378,
+                "validTo": 1754296977
+              },
+              "securityState": "secure",
+              "serviceWorkerRouterInfo": {
+                "actualSourceType": "network",
+                "ruleIdMatched": 0
+              },
+              "status": 301,
+              "statusText": "",
+              "timing": {
+                "connectEnd": 332.783,
+                "connectStart": 0.438,
+                "dnsEnd": 0.283,
+                "dnsStart": 0.278,
+                "proxyEnd": -1,
+                "proxyStart": -1,
+                "pushEnd": 0,
+                "pushStart": 0,
+                "receiveHeadersEnd": 515.92,
+                "receiveHeadersStart": 515.78,
+                "requestTime": 153371.026523,
+                "sendEnd": 334.281,
+                "sendStart": 334.109,
+                "sslEnd": 332.783,
+                "sslStart": 0.438,
+                "workerFetchStart": -1,
+                "workerReady": -0.189,
+                "workerRespondWithSettled": -1,
+                "workerStart": -0.268
+              },
+              "url": "https://youtube.com/"
+            },
+            "request": {
+              "headers": {
+                "Referer": "https://www.youtube.com/",
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"
+              },
+              "initialPriority": "High",
+              "isSameSite": true,
+              "method": "GET",
+              "mixedContentType": "none",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "url": "https://www.youtube.com/"
+            },
+            "requestId": "78097.391",
+            "timestamp": 153371.542837,
+            "type": "Fetch",
+            "wallTime": 1748930038.385404
+          }
+        },
+        {
+          "method": "Network.loadingFailed",
+          "params": {
+            "canceled": true,
+            "errorText": "net::ERR_ABORTED",
+            "requestId": "78097.391",
+            "timestamp": 153371.543006,
+            "type": "Fetch"
+          }
+        }
+      ],
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:54:01.728112",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:54:01.728101"
+      },
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:54:01.732265",
+      "type": "BROWSER_LOGS",
+      "details": [
+        {
+          "level": "WARNING",
+          "message": "https://www.youtube.com/ - The resource https://i.ytimg.com/generate_204 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally.",
+          "source": "javascript",
+          "timestamp": 1748930041714
+        }
+      ],
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:54:03.754535",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:54:03.754524"
+      },
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:54:05.774332",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:54:05.774315"
+      },
+      "url": "https://www.youtube.com/"
+    },
+    {
+      "timestamp": "2025-06-03T10:54:07.795269",
+      "type": "PAGE_INFO",
+      "details": {
+        "url": "https://www.youtube.com/",
+        "title": "YouTube",
+        "timestamp": "2025-06-03T10:54:07.795237"
+      },
+      "url": "https://www.youtube.com/"
+    }
+  ]
+}
