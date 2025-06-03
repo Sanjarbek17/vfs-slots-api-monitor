@@ -1,124 +1,115 @@
-# VFS Slots API Monitor
+# Browser Monitor with Selenium
 
-A collection of Python scripts for monitoring VFS Global visa application slots and news updates. This tool helps users track appointment slot availability and news updates from VFS Global.
+This project contains Python scripts that use Selenium to create a Chrome browser instance, allow URL input, and monitor user interactions.
+
+## Files
+
+1. **`browser_monitor.py`** - Advanced version with detailed logging and network monitoring
+2. **`simple_browser_monitor.py`** - Basic version with simple activity tracking
 
 ## Features
 
-- **Automated Authentication** (`AuthVFS.py`)
-  - Handles login to VFS Global website
-  - Extracts and manages JWT tokens
-  - Uses Selenium for browser automation
-  - Supports CAPTCHA solving
+### Advanced Monitor (`browser_monitor.py`)
+- 🌐 Opens Chrome browser with monitoring capabilities
+- 📝 Logs detailed activity including:
+  - Page navigation
+  - URL changes
+  - Title changes
+  - Browser console logs
+  - Network activity
+  - User interactions
+- 💾 Saves logs to JSON file
+- 🔍 Real-time monitoring
 
-- **Appointment Slot Monitoring** (`PingVFS.py`)
-  - Continuously monitors for available appointment slots
-  - Sends desktop notifications when slots are found
-  - Plays sound alerts for immediate attention
-  - Logs all responses for tracking
-
-- **News Updates** (`NewsVFS.py`)
-  - Monitors VFS Global news feed
-  - Notifies about new articles and announcements
-  - Displays news content in terminal
-  - Sound notifications for updates
-
-## Requirements
-
-- Python 3.x
-- Chrome/Chromium browser
-- Required Python packages:
-  - selenium
-  - requests
-  - pygame
-  - playsound (for Windows)
+### Simple Monitor (`simple_browser_monitor.py`)
+- 🌐 Opens Chrome browser
+- 📝 Basic activity logging:
+  - URL navigation
+  - Page title changes
+  - Timestamps
+- 💾 Saves to text file
+- 🎯 Easy to understand and modify
 
 ## Installation
 
-1. Clone the repository:
+The required packages are already in `requirements.txt`. Make sure your virtual environment is activated:
+
 ```bash
-git clone https://github.com/yourusername/vfs-slots-api-monitor.git
-cd vfs-slots-api-monitor
+# Activate virtual environment (if you have one)
+source venv/bin/activate
+
+# Install dependencies (if needed)
+pip install -r requirements.txt
 ```
-
-2. Create a virtual environment and activate it:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. Install the required packages:
-```bash
-pip install selenium requests pygame playsound
-```
-
-
-![Screenshot](screenshot.png)
-
-## Installation
-This project is developed following the quote _"Code is the best documentation"_, therefore it's better you work it out yourself by analyzing the codebase.
-
-Hints-
-- These scripts are crafted for _Linux_ machines.
-- You need `python3` installed and configured in you machine.
-- Selenium and ChromeWebdriver needed to be installed in the machine.
-- For using the `monitor` UX `tmux` also needed to be installed in the machine.
-- Understand the `monitor`, `.gitignore` file and the `main()` function of the `*.py` files.
-- Rename the `example.*.json` files to `*.json` and set necessary credentials in there.
-- Place a `*.mp3` music file as `alert.mp3` in the project root directory.
-
-## Configuration
-
-1. Copy the example configuration files:
-```bash
-cp example.auth_creds.json auth_creds.json
-cp example.ping_creds.json ping_creds.json
-cp example.news_creds.json news_creds.json
-```
-
-2. Edit the configuration files with your details:
-- `auth_creds.json`: VFS login credentials
-- `ping_creds.json`: Appointment monitoring settings
-- `news_creds.json`: News monitoring settings
 
 ## Usage
 
-Run the monitor script with or without news monitoring:
+### Running the Advanced Monitor
 
 ```bash
-# Without news monitoring
-./monitor
-
-# With news monitoring
-./monitor --with-news
+python browser_monitor.py
 ```
 
-The script will:
-1. Start authentication process
-2. Monitor for appointment slots
-3. Monitor news updates (if enabled)
-4. Send notifications for any changes
+### Running the Simple Monitor
 
-## Understanding the Output
+```bash
+python simple_browser_monitor.py
+```
 
-- `.` (dots): Indicates active monitoring
-- Notifications: Desktop notifications for updates
-- Sound alerts: Plays when slots are found
-- Terminal output: Detailed information and status
+## How it Works
 
-## License
+1. **Browser Setup**: Automatically downloads and sets up ChromeDriver
+2. **URL Input**: Prompts you to enter a URL to visit
+3. **Navigation**: Opens the URL in Chrome browser
+4. **Monitoring**: Watches for:
+   - Page changes
+   - URL changes
+   - User interactions
+   - Network requests (advanced version)
+5. **Logging**: Records all activities with timestamps
+6. **Saving**: Saves log files when you exit
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+## Example Output
 
-## Contributing
+```
+🚀 Starting Browser Monitor
+Setting up Chrome browser...
+✅ Browser ready!
 
-Contributions are welcome! Please feel free to submit pull requests.
+🌐 Enter URL to visit (or 'quit' to exit): google.com
+
+[14:30:15] 🔗 Navigating to: https://google.com
+[14:30:16] 📍 URL changed to: https://google.com
+[14:30:17] 📄 Page title: Google
+[14:30:20] 📍 URL changed to: https://google.com/search?q=python
+
+🔍 Monitoring your browser activity...
+Press Ctrl+C here to stop monitoring.
+```
+
+## Log Files
+
+- **Advanced version**: Creates JSON files with detailed activity data
+- **Simple version**: Creates text files with basic activity logs
+- Files are saved with timestamps: `activity_log_20250603_143022.json`
+
+## Controls
+
+- **Enter URL**: Type any URL (http/https prefix optional)
+- **Stop monitoring**: Press `Ctrl+C` in the terminal
+- **Exit program**: Type `quit` when prompted for URL
+- **Browser interaction**: Use the browser normally - all activity is logged
+
+## Tips
+
+1. The browser stays open for you to interact with
+2. All your clicks, navigation, and page changes are logged
+3. You can visit multiple URLs in one session
+4. The program automatically handles ChromeDriver installation
+5. Logs are saved automatically when you exit
 
 ## Troubleshooting
 
-- **Authentication Issues**: Check your credentials in `auth_creds.json`
-- **CAPTCHA**: The script will pause for manual CAPTCHA solving
-- **Sound not working**: Ensure system volume is on and audio device is working
-
-## Disclaimer
-
-This tool is for personal use only. Please respect VFS Global's terms of service and rate limiting policies.
+- Make sure Chrome browser is installed on your system
+- If ChromeDriver issues occur, the script will auto-download the correct version
+- Check the log files for detailed error information

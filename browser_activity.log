@@ -1,0 +1,30 @@
+2025-06-03 10:37:36,818 - INFO - ====== WebDriver manager ======
+2025-06-03 10:37:36,979 - INFO - Get LATEST chromedriver version for google-chrome
+2025-06-03 10:37:37,674 - INFO - Get LATEST chromedriver version for google-chrome
+2025-06-03 10:37:38,315 - INFO - Driver [/Users/sanjarbeksaidov/.wdm/drivers/chromedriver/mac64/137.0.7151.68/chromedriver-mac-arm64/chromedriver] found in cache
+2025-06-03 10:37:38,532 - ERROR - Failed to setup Chrome: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: cannot parse perfLoggingPrefs
+from invalid argument: unrecognized performance logging option: enableTimeline
+Stacktrace:
+0   chromedriver                        0x0000000104816654 cxxbridge1$str$ptr + 2723108
+1   chromedriver                        0x000000010480e8c8 cxxbridge1$str$ptr + 2690968
+2   chromedriver                        0x0000000104362714 cxxbridge1$string$len + 90428
+3   chromedriver                        0x000000010438c060 cxxbridge1$string$len + 260744
+4   chromedriver                        0x000000010438a520 cxxbridge1$string$len + 253768
+5   chromedriver                        0x0000000104387544 cxxbridge1$string$len + 241516
+6   chromedriver                        0x00000001043d5784 cxxbridge1$string$len + 561580
+7   chromedriver                        0x00000001043d524c cxxbridge1$string$len + 560244
+8   chromedriver                        0x00000001043d69d0 cxxbridge1$string$len + 566264
+9   chromedriver                        0x00000001043d67e4 cxxbridge1$string$len + 565772
+10  chromedriver                        0x000000010439d9c8 cxxbridge1$string$len + 332784
+11  chromedriver                        0x00000001047da278 cxxbridge1$str$ptr + 2476360
+12  chromedriver                        0x00000001047dd50c cxxbridge1$str$ptr + 2489308
+13  chromedriver                        0x00000001047bba64 cxxbridge1$str$ptr + 2351412
+14  chromedriver                        0x00000001047ddd94 cxxbridge1$str$ptr + 2491492
+15  chromedriver                        0x00000001047acd58 cxxbridge1$str$ptr + 2290728
+16  chromedriver                        0x00000001047fdd60 cxxbridge1$str$ptr + 2622512
+17  chromedriver                        0x00000001047fdeec cxxbridge1$str$ptr + 2622908
+18  chromedriver                        0x000000010480e514 cxxbridge1$str$ptr + 2690020
+19  libsystem_pthread.dylib             0x000000018159ec0c _pthread_start + 136
+20  libsystem_pthread.dylib             0x0000000181599b80 thread_start + 8
+
