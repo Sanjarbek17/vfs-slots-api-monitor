@@ -111,8 +111,13 @@ class SimpleBrowserMonitor:
                 print("✅ Browser closed")
 
             # Save activity log
+            import os
+
+            os.makedirs(
+                "activity_log", exist_ok=True
+            )  # Ensure activity_log folder exists
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = f"simple_activity_{timestamp}.txt"
+            filename = f"activity_log/simple_activity_{timestamp}.txt"
             with open(filename, "w") as f:
                 f.write("\n".join(self.activities))
             print(f"📁 Activity saved to: {filename}")

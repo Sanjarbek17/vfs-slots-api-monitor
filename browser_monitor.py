@@ -18,10 +18,17 @@ from webdriver_manager.chrome import ChromeDriverManager
 import logging
 
 # Set up logging
+import os
+
+os.makedirs("activity_log", exist_ok=True)  # Ensure activity_log folder exists
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.FileHandler("browser_activity.log"), logging.StreamHandler()],
+    handlers=[
+        logging.FileHandler("activity_log/browser_activity.log"),
+        logging.StreamHandler(),
+    ],
 )
 logger = logging.getLogger(__name__)
 
@@ -239,7 +246,9 @@ class BrowserMonitor:
 
     def save_activity_log(self):
         """Save activity log to file"""
-        filename = f"activity_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        filename = (
+            f"activity_log/activity_log_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        )
         try:
             with open(filename, "w") as f:
                 json.dump(

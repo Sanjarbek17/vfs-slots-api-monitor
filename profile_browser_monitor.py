@@ -21,11 +21,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 import logging
 
 # Set up logging
+os.makedirs("activity_log", exist_ok=True)  # Ensure activity_log folder exists
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler("profile_browser_activity.log"),
+        logging.FileHandler("activity_log/profile_browser_activity.log"),
         logging.StreamHandler(),
     ],
 )
@@ -196,7 +197,10 @@ class ProfileBrowserMonitor:
     def save_activity_log(self):
         """Save activity log to JSON file"""
         try:
-            with open("profile_browser_activity.json", "w") as f:
+            os.makedirs(
+                "activity_log", exist_ok=True
+            )  # Ensure activity_log folder exists
+            with open("activity_log/profile_browser_activity.json", "w") as f:
                 json.dump(self.activity_log, f, indent=2)
         except Exception as e:
             logger.error(f"Failed to save activity log: {e}")

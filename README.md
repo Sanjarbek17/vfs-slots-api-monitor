@@ -76,7 +76,7 @@ python browser_monitor.py
 ### `profile_browser_monitor.py`
 - **Best for**: Full-featured monitoring with your Chrome profile
 - **Features**: Profile detection, remote debugging connection, comprehensive logging
-- **Output**: `profile_browser_activity.log`, `profile_browser_activity.json`
+- **Output**: `activity_log/profile_browser_activity.log`, `activity_log/profile_browser_activity.json`
 
 ### `chrome_profile_launcher.py`
 - **Best for**: Launching Chrome with proper debugging setup
@@ -86,12 +86,12 @@ python browser_monitor.py
 ### `simple_browser_monitor.py`
 - **Best for**: Quick testing and basic monitoring
 - **Features**: Minimal setup, basic activity logging
-- **Output**: `simple_activity_*.txt`
+- **Output**: `activity_log/simple_activity_*.txt`
 
 ### `browser_monitor.py`
 - **Best for**: Advanced users who need detailed network monitoring
 - **Features**: Performance logging, network activity tracking, advanced Chrome options
-- **Output**: `browser_activity.log`, `activity_log_*.json`
+- **Output**: `activity_log/browser_activity.log`, `activity_log/activity_log_*.json`
 
 ## How It Works
 
@@ -114,6 +114,8 @@ The system automatically detects your Chrome profile location:
 
 ## Output Files
 
+All activity logs are now organized in the `activity_log/` folder for better organization.
+
 ### JSON Logs
 ```json
 {
@@ -130,6 +132,13 @@ The system automatically detects your Chrome profile location:
 2025-06-03 10:57:55,957 - INFO - [BROWSER_START] Chrome browser opened with profile
 2025-06-03 10:57:55,966 - INFO - [URL_CHANGE] Navigated to: about:blank
 ```
+
+### Log File Organization
+- `activity_log/browser_activity.log` - Main browser monitor log file
+- `activity_log/activity_log_YYYYMMDD_HHMMSS.json` - Detailed JSON activity logs
+- `activity_log/profile_browser_activity.log` - Profile monitor log file  
+- `activity_log/profile_browser_activity.json` - Profile monitor JSON data
+- `activity_log/simple_activity_YYYYMMDD_HHMMSS.txt` - Simple monitor text logs
 
 ## Troubleshooting
 
