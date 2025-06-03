@@ -67,43 +67,48 @@ class BrowserMonitor:
 
             chrome_options = Options()
 
-            # Use default Chrome profile for normal browsing experience
+            # Use dedicated Chrome profile for monitoring to avoid verification issues
             import os
             import platform
 
-            # Get the default Chrome profile path based on OS
-            if platform.system() == "Darwin":  # macOS
-                profile_path = os.path.expanduser(
-                    "~/Library/Application Support/Google/Chrome/Default"
-                )
-            elif platform.system() == "Windows":
-                profile_path = os.path.expanduser(
-                    "~/AppData/Local/Google/Chrome/User Data/Default"
-                )
-            else:  # Linux
-                profile_path = os.path.expanduser("~/.config/google-chrome/Default")
+            # Create a completely clean temporary profile for VFS Global
+            import tempfile
 
-            # Set user data directory to use default profile
-            user_data_dir = os.path.dirname(profile_path)
-            if os.path.exists(user_data_dir):
-                chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
-                chrome_options.add_argument("--profile-directory=Default")
-                logger.info(f"Using default Chrome profile: {profile_path}")
-            else:
-                logger.warning(
-                    "Default Chrome profile not found, using temporary profile"
-                )
+            temp_profile = tempfile.mkdtemp(prefix="vfs_clean_")
+            chrome_options.add_argument(f"--user-data-dir={temp_profile}")
+            logger.info(f"Using clean temporary profile: {temp_profile}")
+            print("🔒 Using clean temporary profile for VFS Global compatibility")
 
             # Keep browser more natural while still allowing monitoring
             chrome_options.add_argument("--enable-logging")
             chrome_options.add_argument("--log-level=0")
 
-            # Make browser less detectable as automated (but keep some automation features)
+            # Enhanced stealth options to avoid verification prompts
             chrome_options.add_argument("--disable-blink-features=AutomationControlled")
             chrome_options.add_experimental_option(
                 "excludeSwitches", ["enable-automation"]
             )
             chrome_options.add_experimental_option("useAutomationExtension", False)
+
+            # Additional anti-detection measures for VFS Global
+            chrome_options.add_argument("--disable-dev-shm-usage")
+            chrome_options.add_argument("--no-sandbox")
+            chrome_options.add_argument("--disable-web-security")
+            chrome_options.add_argument("--allow-running-insecure-content")
+            chrome_options.add_argument("--disable-features=VizDisplayCompositor")
+            chrome_options.add_argument("--disable-gpu")
+            chrome_options.add_argument("--disable-extensions")
+
+            # Disable automation detection features
+            chrome_options.add_argument("--disable-ipc-flooding-protection")
+            chrome_options.add_argument("--disable-background-timer-throttling")
+            chrome_options.add_argument("--disable-backgrounding-occluded-windows")
+            chrome_options.add_argument("--disable-renderer-backgrounding")
+
+            # Natural user agent to avoid detection
+            chrome_options.add_argument(
+                "--user-agent=Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            )
 
             # Allow normal browser behavior
             chrome_options.add_argument("--no-first-run")
@@ -137,12 +142,27 @@ class BrowserMonitor:
 
             self.driver = webdriver.Chrome(service=service, options=chrome_options)
 
-            # Hide automation indicators (optional - comment out for debugging)
+            # Hide automation indicators and add stealth features
             try:
                 self.driver.execute_script(
                     "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"
                 )
-            except:
+                # Override user agent via CDP
+                self.driver.execute_cdp_cmd(
+                    "Network.setUserAgentOverride",
+                    {
+                        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+                    },
+                )
+                # Hide Chrome automation flags
+                self.driver.execute_script(
+                    "Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]})"
+                )
+                self.driver.execute_script(
+                    "Object.defineProperty(navigator, 'languages', {get: () => ['en-US', 'en']})"
+                )
+            except Exception as stealth_error:
+                logger.debug(f"Some stealth features not available: {stealth_error}")
                 pass  # Not critical if this fails
 
             logger.info("Chrome browser initialized successfully")
@@ -154,31 +174,18 @@ class BrowserMonitor:
             return self._setup_chrome_fallback()
 
     def _setup_chrome_fallback(self):
-        """Fallback Chrome setup with minimal options but still try default profile"""
+        """Fallback Chrome setup with minimal options but still try dedicated profile"""
         try:
             logger.info("Attempting fallback Chrome setup...")
             chrome_options = Options()
 
-            # Try to use default profile even in fallback
-            import os
-            import platform
-
-            if platform.system() == "Darwin":  # macOS
-                profile_path = os.path.expanduser(
-                    "~/Library/Application Support/Google/Chrome/Default"
-                )
-            elif platform.system() == "Windows":
-                profile_path = os.path.expanduser(
-                    "~/AppData/Local/Google/Chrome/User Data/Default"
-                )
-            else:  # Linux
-                profile_path = os.path.expanduser("~/.config/google-chrome/Default")
-
-            user_data_dir = os.path.dirname(profile_path)
-            if os.path.exists(user_data_dir):
-                chrome_options.add_argument(f"--user-data-dir={user_data_dir}")
-                chrome_options.add_argument("--profile-directory=Default")
-                logger.info("Fallback: Using default Chrome profile")
+            # Use dedicated profile even in fallback
+            monitor_profile_dir = os.path.expanduser(
+                "~/chrome_monitor_profile_fallback"
+            )
+            os.makedirs(monitor_profile_dir, exist_ok=True)
+            chrome_options.add_argument(f"--user-data-dir={monitor_profile_dir}")
+            logger.info("Fallback: Using dedicated Chrome profile")
 
             # Minimal options for basic functionality
             chrome_options.add_argument("--disable-blink-features=AutomationControlled")
@@ -285,8 +292,8 @@ class BrowserMonitor:
     def monitor_user_activity(self):
         """Monitor user interactions in real-time"""
         print("\n" + "=" * 60)
-        print("🔍 Browser Monitor with Default Profile is now active!")
-        print("👤 Using your Chrome profile (bookmarks, extensions, etc.)")
+        print("🔍 Browser Monitor with Dedicated Profile is now active!")
+        print("👤 Using a dedicated Chrome profile for monitoring")
         print("📱 Use Chrome normally - all your activity is being logged")
         print("🌐 Navigate to any website, click links, type, etc.")
         print("⏹️  Press Ctrl+C in this terminal to stop monitoring")
@@ -355,7 +362,7 @@ class BrowserMonitor:
 
     def run(self):
         """Main execution method"""
-        print("Starting Browser Monitor with Default Profile...")
+        print("Starting Browser Monitor with Dedicated Profile...")
 
         # Setup Chrome
         if not self.setup_chrome():
@@ -364,20 +371,20 @@ class BrowserMonitor:
 
         try:
             # Open Chrome with a user-friendly starting page
-            print("Opening Chrome browser with your default profile...")
+            print("Opening Chrome browser with dedicated profile...")
 
             # Start with Chrome's new tab page or homepage for a more natural experience
             try:
                 self.driver.get("chrome://newtab")
                 self.log_activity(
                     "BROWSER_OPENED",
-                    "Chrome browser opened with default profile and new tab page",
+                    "Chrome browser opened with dedicated profile and new tab page",
                 )
             except:
                 # Fallback to blank page if chrome://newtab doesn't work
                 self.driver.get("about:blank")
                 self.log_activity(
-                    "BROWSER_OPENED", "Chrome browser opened with default profile"
+                    "BROWSER_OPENED", "Chrome browser opened with dedicated profile"
                 )
 
             # Start monitoring user activity immediately
